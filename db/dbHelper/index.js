@@ -3,7 +3,7 @@
 const db = require("../dbConfig");
 
 module.exports = {
-  async getPost() {
+  async getPosts() {
     return await db(`Post`).select();
   },
 

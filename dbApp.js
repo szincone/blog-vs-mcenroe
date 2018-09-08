@@ -2,7 +2,7 @@
 
 const db = require("./db/dbHelper");
 
-// db.getPost().then(data => {
+// db.getPosts().then(data => {
 //   console.log(`~~~~~~GET POSTS~~~~~~~~`);
 //   console.log(data);
 // });
