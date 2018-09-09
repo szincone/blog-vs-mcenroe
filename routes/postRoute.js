@@ -4,18 +4,18 @@ const helpers = require("../db/dbHelper/");
 const router = express.Router();
 
 // start gets
-router.get("/", (req, res) => {
+router.get("/", (req, res, next) => {
   helpers
     .getPosts()
     .then(posts => {
       res.status(200).json(posts);
     })
     .catch(err => {
-      res.status(500).json({ error: "Error retrieving posts information." });
+      next(err)
     });
 });
 
-router.get("/:id", (req, res) => {
+router.get("/:id", (req, res, next) => {
   const { id } = req.params;
   helpers
     .getPost(id)
@@ -23,7 +23,7 @@ router.get("/:id", (req, res) => {
       res.status(200).json(posts);
     })
     .catch(err => {
-      res.status(500).json({ error: "Error retrieving posts information." });
+        next(err)
     });
 });
 // end gets
@@ -43,7 +43,7 @@ router.delete("/:id", (req, res) => {
       }
     })
     .catch(err => {
-      res.status(500).json({ error: "The post could not be removed." });
+      next(err)
     });
 });
 // end delete
@@ -62,7 +62,7 @@ router.put("/:id", (req, res) => {
         res.status(200).json({ message: "Post successfully modified." });
       })
       .catch(err => {
-        res.status(500).json({ error: "The post could not be updated." });
+        next(err)
       });
   }
 });
@@ -85,7 +85,7 @@ router.post("/", (req, res) => {
         res.status(201).json({ message: "Post successfully added." });
       })
       .catch(err => {
-        res.status(500).json({ error: "The post could not be added." });
+        next(err)
       });
   }
 });
