@@ -1,21 +1,49 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from "react";
+import { connect } from "react-redux";
+import { withRouter, Route } from "react-router-dom";
+import { fetchPosts, fetchPostID } from "./actions/index";
+import "./App.css";
+import MainFeed from "./containers/MainFeed";
+import PostView from "./containers/PostView";
 
 class App extends Component {
+  state = {};
+  componentDidMount() {
+    this.props.fetchPosts();
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Fragment>
+        <Route
+          exact
+          path="/"
+          render={props => <MainFeed {...props} {...this.props} />}
+        />
+        <Route
+          exact
+          path="/:id"
+          render={props => <PostView {...props} {...this.props} />}
+        />
+      </Fragment>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    posts: state.posts,
+    isFetching: state.isFetching,
+    isFetched: state.isFetched,
+    hasError: state.hasError,
+  };
+};
+
+export default withRouter(
+  connect(
+    mapStateToProps,
+    {
+      fetchPosts,
+      fetchPostID,
+    },
+  )(App),
+);
