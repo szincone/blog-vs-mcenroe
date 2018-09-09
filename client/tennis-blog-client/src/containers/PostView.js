@@ -15,7 +15,7 @@ class PostView extends React.Component {
     loaded: false,
   };
   componentDidMount() {
-    console.log("STATE.ID", typeof this.props.location.pathname);
+    console.log('PROPS', this.props)
     const post = this.props.posts.filter(post => post.id === this.state.id)[0];
     this.setState({
       title: post.title,
@@ -25,7 +25,6 @@ class PostView extends React.Component {
     });
   }
   render() {
-    console.log("NEW RENDER", this.props.posts);
     return (
       <div className="App">
         <header className="App-header">
@@ -45,6 +44,7 @@ class PostView extends React.Component {
         <Link to="/">
           <button>Home</button>
         </Link>
+        <button onClick={() => this.props.deletePost(this.state.id)}>Delete</button>
       </div>
     );
   }
