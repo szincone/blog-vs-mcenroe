@@ -3,6 +3,8 @@ import {
   FETCH_SUCCESS,
   FETCH_FAILURE,
   FETCHING_POST,
+  DEL_POST,
+  DELETED_POST,
 } from "../actions";
 
 const initialState = {
@@ -10,6 +12,7 @@ const initialState = {
   isFetching: false,
   isFetched: false,
   hasError: false,
+  isDeleting: false,
 };
 
 export const rootReducer = (state = initialState, action) => {
@@ -37,6 +40,17 @@ export const rootReducer = (state = initialState, action) => {
         isFetched: false,
         hasError: action.payload,
       };
+    case DEL_POST: 
+      return {
+        ...state,
+        isDeleting: true
+      }
+    case DELETED_POST:
+      return {
+        ...state,
+        isDeleting: false,
+        posts: state.posts.filter(post => post.id !== action.payload)
+      }
     default:
       return state;
   }

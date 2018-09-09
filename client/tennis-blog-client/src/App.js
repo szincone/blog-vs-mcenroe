@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import { withRouter, Route } from "react-router-dom";
-import { fetchPosts, fetchPostID } from "./actions/index";
+import { fetchPosts, fetchPostID, deletePost } from "./actions/index";
 import "./App.css";
 import MainFeed from "./containers/MainFeed";
 import PostView from "./containers/PostView";
@@ -35,6 +35,7 @@ const mapStateToProps = state => {
     isFetching: state.isFetching,
     isFetched: state.isFetched,
     hasError: state.hasError,
+    deletePost: state.deletePost
   };
 };
 
@@ -44,6 +45,7 @@ export default withRouter(
     {
       fetchPosts,
       fetchPostID,
+      deletePost
     },
   )(App),
 );

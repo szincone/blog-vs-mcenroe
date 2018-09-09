@@ -11,6 +11,7 @@ export const FETCH_FAILURE = "FETCH_FAILURE";
 // case actions for updating state
 export const ADD_NEW_POST = "ADD_NEW_POST";
 export const DEL_POST = "DEL_POST";
+export const DELETED_POST = "DELETED_POST"
 export const MODIFY_POST = "MODIFY_POST";
 
 const URL = `http://localhost:9000`;
@@ -39,3 +40,15 @@ export const fetchPostID = id => {
     }
   };
 };
+
+export const deletePost = id => {
+  return async dispatch => {
+    dispatch({ type: DEL_POST })
+    try {
+      await axios.delete(`${URL}/posts/${id}`)
+      dispatch({ type: DELETED_POST, payload: id })
+    } catch (err){
+      dispatch({ type: FETCH_FAILURE })
+    }
+  }
+}
