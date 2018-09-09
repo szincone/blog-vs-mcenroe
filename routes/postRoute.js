@@ -2,7 +2,7 @@
 const express = require("express");
 const helpers = require("../db/dbHelper/");
 const router = express.Router();
-
+const middlewareFunctions = require("../middleware/postMiddlewares.js");
 // start gets
 router.get("/", (req, res, next) => {
   helpers
@@ -11,7 +11,8 @@ router.get("/", (req, res, next) => {
       res.status(200).json(posts);
     })
     .catch(err => {
-      next(err)
+      err.code = 500;
+      next(err);
     });
 });
 
@@ -23,13 +24,14 @@ router.get("/:id", (req, res, next) => {
       res.status(200).json(posts);
     })
     .catch(err => {
-        next(err)
+      err.code = 500;
+      next(err);
     });
 });
 // end gets
 
 // start delete
-router.delete("/:id", (req, res) => {
+router.delete("/:id", (req, res, next) => {
   const { id } = req.params;
   helpers
     .delPost(id)
@@ -43,18 +45,18 @@ router.delete("/:id", (req, res) => {
       }
     })
     .catch(err => {
-      next(err)
+      err.code = 500;
+      next(err);
     });
 });
 // end delete
 
 // start put
-router.put("/:id", (req, res) => {
+router.put("/:id", (req, res, next) => {
   const newPost = req.body;
   if (!newPost.title || !newPost.content) {
-    return res.status(406).json({
-      errorMessage: "Please provide a title and content for the post.",
-    });
+    err.code = 406;
+    next(err);
   } else {
     helpers
       .putPost(newPost)
@@ -62,22 +64,19 @@ router.put("/:id", (req, res) => {
         res.status(200).json({ message: "Post successfully modified." });
       })
       .catch(err => {
-        next(err)
+        err.code = 500;
+        next(err);
       });
   }
 });
 // end put
 
 // start post
-router.post("/", (req, res) => {
+router.post("/", middlewareFunctions.addTimeStamp, (req, res, next) => {
   const post = req.body;
-  // gets time of post and sets it
-  const newTime = new Date();
-  post.time_stamp = newTime;
   if (!post.title || !post.content) {
-    return res.status(406).json({
-      errorMessage: "Please provide a name for the post.",
-    });
+    err.code = 406;
+    next(err);
   } else {
     helpers
       .addPost(post)
@@ -85,7 +84,8 @@ router.post("/", (req, res) => {
         res.status(201).json({ message: "Post successfully added." });
       })
       .catch(err => {
-        next(err)
+        err.code = 500;
+        next(err);
       });
   }
 });
