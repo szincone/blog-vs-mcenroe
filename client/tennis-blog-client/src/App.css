@@ -3,3 +3,12 @@
   max-width: 800px;
   width: 100%;
 }
+
+.posts-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+}
