@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 function MainFeed(props) {
   return (
-    <div>
+    <div className="main-container">
       {props.posts.map(post => (
         <NavLink to={`/${post.id}`} key={post.id}>
           <Post {...post} />
