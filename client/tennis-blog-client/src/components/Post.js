@@ -18,8 +18,18 @@ const divStyle = {
 function Post(props) {
   return (
     <div style={divStyle}>
-      <h1>Title: {props.title}</h1>
-      <h2 style={{ margin: "1rem 0" }}>Content: {props.content}</h2>
+      <h1>
+        Title:{" "}
+        {props.title.length > 12
+          ? props.title.substring(0, 12) + "..."
+          : props.title}
+      </h1>
+      <h2 style={{ margin: "1rem 0" }}>
+        Content:{" "}
+        {props.content.length > 50
+          ? props.content.substring(0, 50) + "..."
+          : props.content}
+      </h2>
       <h3>Score: {props.score}</h3>
     </div>
   );
