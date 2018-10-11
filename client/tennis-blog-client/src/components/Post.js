@@ -12,6 +12,7 @@ const divStyle = {
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
+  boxShadow: "#E75A7C 10px 10px",
 };
 
 function Post(props) {
