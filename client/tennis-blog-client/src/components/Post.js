@@ -5,9 +5,10 @@ const divStyle = {
   WebkitTransition: "all", // note the capital 'W' here
   msTransition: "all", // 'ms' is the only lowercase vendor prefix
   width: "300px",
-  height: "250px",
+  height: "225px",
   textAlign: "center",
   margin: "1rem",
+  fontSize: "1.5rem",
 };
 
 function Post(props) {
