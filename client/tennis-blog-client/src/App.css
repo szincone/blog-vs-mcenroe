@@ -138,21 +138,26 @@ table {
   font-size: 62.5%;
 }
 
+body {
+  background: #2c363f;
+}
+
 .main-container {
   margin: 0 auto;
   max-width: 800px;
   width: 100%;
+  padding: 0 1rem;
+  background: #e75a7c;
 }
 
 .posts-container {
   display: flex;
   flex-wrap: wrap;
+  padding: 0 2rem;
+  background: #f2f5ea;
 }
 
 a {
   text-decoration: none;
+  color: black;
 }
-
-/* h2 {
-  padding: 1.5rem;
-} */
