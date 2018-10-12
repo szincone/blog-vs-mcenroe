@@ -35,7 +35,7 @@ const mapStateToProps = state => {
     isFetching: state.isFetching,
     isFetched: state.isFetched,
     hasError: state.hasError,
-    deletePost: state.deletePost
+    deletePost: state.deletePost,
   };
 };
 
@@ -45,7 +45,7 @@ export default withRouter(
     {
       fetchPosts,
       fetchPostID,
-      deletePost
+      deletePost,
     },
   )(App),
 );

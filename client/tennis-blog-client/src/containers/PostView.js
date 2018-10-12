@@ -37,7 +37,6 @@ class PostView extends React.Component {
 
     const h1Style = {
       textAlign: "center",
-      padding: "1rem",
       fontSize: "2rem",
       color: "white",
       textShadow: "#FC0 0px 0 25px",
@@ -71,7 +70,14 @@ class PostView extends React.Component {
     const buttonsDivStyle = {
       display: "flex",
       flexDirection: "row",
-      marginTop: "1rem",
+      background: "rgb(231, 90, 124)",
+      color: "#ffffff",
+      fontWeight: "bold",
+      display: "flex",
+      justifyContent: "center",
+      padding: ".5rem 4rem",
+      borderRadius: "10px",
+      width: "500px",
     };
 
     const buttonStyle = {
