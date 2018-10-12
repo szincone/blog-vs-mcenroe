@@ -25,13 +25,25 @@ class PostView extends React.Component {
     });
   }
   render() {
+    const headerStyle = {
+      background: "rgb(231, 90, 124)",
+      color: "#ffffff",
+      fontWeight: "bold",
+      display: "flex",
+      justifyContent: "center",
+      margin: ".5rem",
+      padding: ".5rem 4rem",
+      borderRadius: "10px",
+    };
+
     const cardStyle = {
       border: "1px solid black",
       height: "500px",
       width: "500px",
       display: "flex",
       flexDirection: "column",
-      background: "white",
+      background: "#ffffff",
+      borderRadius: "10px",
     };
 
     const cardContainerStyle = {
@@ -59,7 +71,7 @@ class PostView extends React.Component {
 
     return (
       <div className="cardContainer" style={cardContainerStyle}>
-        <header className="header">
+        <header className="header" style={headerStyle}>
           <h1 className="title">Individual Post</h1>
         </header>
         {this.props.isFetching ? (
