@@ -36,6 +36,14 @@ class PostView extends React.Component {
       width: "500px",
     };
 
+    const h1Style = {
+      textAlign: "center",
+      padding: "1rem",
+      fontSize: "2rem",
+      color: "white",
+      textShadow: "#FC0 0px 0 25px",
+    };
+
     const cardStyle = {
       border: "1px solid black",
       height: "500px",
