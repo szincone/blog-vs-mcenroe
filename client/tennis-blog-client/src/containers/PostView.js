@@ -48,6 +48,15 @@ class PostView extends React.Component {
       marginTop: "1rem",
     };
 
+    const buttonStyle = {
+      display: "flex",
+      margin: "0 1rem",
+      background: "#e75a7c",
+      color: "#ffffff",
+      fontWeight: "bold",
+      borderRadius: "10px",
+    };
+
     return (
       <div className="cardContainer" style={cardContainerStyle}>
         <header className="header">
@@ -66,9 +75,12 @@ class PostView extends React.Component {
         )}
         <div className="singlePostButtonsDiv" style={buttonsDivStyle}>
           <Link to="/">
-            <button>Home</button>
+            <button style={buttonStyle}>Home</button>
           </Link>
-          <button onClick={() => this.props.deletePost(this.state.id)}>
+          <button
+            onClick={() => this.props.deletePost(this.state.id)}
+            style={buttonStyle}
+          >
             Delete
           </button>
         </div>
