@@ -15,7 +15,6 @@ class PostView extends React.Component {
     loaded: false,
   };
   componentDidMount() {
-    console.log("PROPS", this.props);
     const post = this.props.posts.filter(post => post.id === this.state.id)[0];
     this.setState({
       title: post.title,
@@ -52,6 +51,7 @@ class PostView extends React.Component {
       flexDirection: "column",
       background: "#ffffff",
       borderRadius: "10px",
+      padding: "1rem",
     };
 
     const cardContainerStyle = {
@@ -83,16 +83,18 @@ class PostView extends React.Component {
     return (
       <div className="cardContainer" style={cardContainerStyle}>
         <header className="header" style={headerStyle}>
-          <h1 className="title">Individual Post</h1>
+          <h1 className="title" style={h1Style}>
+            Individual Post
+          </h1>
         </header>
         {this.props.isFetching ? (
           <h1>Loading...</h1>
         ) : (
           <div style={cardStyle}>
             <div>
-              <h1>Title: {this.state.title}</h1>
+              <h2>Title: {this.state.title}</h2>
               <h2>Content: {this.state.content}</h2>
-              <h3>Score: {this.state.score}</h3>
+              <h2>Score: {this.state.score}</h2>
             </div>
           </div>
         )}
