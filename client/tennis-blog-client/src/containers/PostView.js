@@ -14,6 +14,7 @@ class PostView extends React.Component {
     ),
     loaded: false,
   };
+
   componentDidMount() {
     const post = this.props.posts.filter(post => post.id === this.state.id)[0];
     this.setState({
@@ -23,6 +24,7 @@ class PostView extends React.Component {
       loaded: true,
     });
   }
+
   render() {
     const headerStyle = {
       background: "rgb(231, 90, 124)",

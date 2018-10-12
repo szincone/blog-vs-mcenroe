@@ -148,6 +148,7 @@ body {
   width: 100%;
   padding: 0 1rem;
   background: #e75a7c;
+  border-radius: 10px;
 }
 
 .posts-container {
@@ -155,6 +156,7 @@ body {
   flex-wrap: wrap;
   padding: 0 2rem;
   background: #f2f5ea;
+  border-radius: 10px;
 }
 
 a {
