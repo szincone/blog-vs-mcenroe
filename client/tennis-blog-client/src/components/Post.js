@@ -7,7 +7,7 @@ const divStyle = {
   width: "300px",
   height: "225px",
   textAlign: "center",
-  margin: "1rem",
+  margin: "1rem 1.5rem",
   fontSize: "1.5rem",
   display: "flex",
   flexDirection: "column",
