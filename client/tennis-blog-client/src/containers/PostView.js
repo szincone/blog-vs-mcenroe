@@ -15,7 +15,7 @@ class PostView extends React.Component {
     loaded: false,
   };
   componentDidMount() {
-    console.log('PROPS', this.props)
+    console.log("PROPS", this.props);
     const post = this.props.posts.filter(post => post.id === this.state.id)[0];
     this.setState({
       title: post.title,
@@ -25,15 +25,30 @@ class PostView extends React.Component {
     });
   }
   render() {
+    const cardStyle = {
+      border: "1px solid black",
+      height: "500px",
+      width: "500px",
+      display: "flex",
+      flexDirection: "column",
+      background: "white",
+    };
+
+    const cardContainerStyle = {
+      display: "flex",
+      justifyContent: "center",
+      flexDirection: "column",
+      alignItems: "center",
+    };
     return (
-      <div className="App">
+      <div className="cardContainer" style={cardContainerStyle}>
         <header className="App-header">
-          <h1 className="App-title">Lambda posts</h1>
+          <h1 className="App-title">Individual Post</h1>
         </header>
         {this.props.isFetching ? (
           <h1>Loading...</h1>
         ) : (
-          <div>
+          <div style={cardStyle}>
             <div>
               <h1>Title: {this.state.title}</h1>
               <h2>Content: {this.state.content}</h2>
@@ -44,7 +59,9 @@ class PostView extends React.Component {
         <Link to="/">
           <button>Home</button>
         </Link>
-        <button onClick={() => this.props.deletePost(this.state.id)}>Delete</button>
+        <button onClick={() => this.props.deletePost(this.state.id)}>
+          Delete
+        </button>
       </div>
     );
   }
