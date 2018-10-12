@@ -39,11 +39,19 @@ class PostView extends React.Component {
       justifyContent: "center",
       flexDirection: "column",
       alignItems: "center",
+      marginTop: "1rem",
     };
+
+    const buttonsDivStyle = {
+      display: "flex",
+      flexDirection: "row",
+      marginTop: "1rem",
+    };
+
     return (
       <div className="cardContainer" style={cardContainerStyle}>
-        <header className="App-header">
-          <h1 className="App-title">Individual Post</h1>
+        <header className="header">
+          <h1 className="title">Individual Post</h1>
         </header>
         {this.props.isFetching ? (
           <h1>Loading...</h1>
@@ -56,12 +64,14 @@ class PostView extends React.Component {
             </div>
           </div>
         )}
-        <Link to="/">
-          <button>Home</button>
-        </Link>
-        <button onClick={() => this.props.deletePost(this.state.id)}>
-          Delete
-        </button>
+        <div className="singlePostButtonsDiv" style={buttonsDivStyle}>
+          <Link to="/">
+            <button>Home</button>
+          </Link>
+          <button onClick={() => this.props.deletePost(this.state.id)}>
+            Delete
+          </button>
+        </div>
       </div>
     );
   }
