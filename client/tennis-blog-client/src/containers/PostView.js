@@ -31,9 +31,9 @@ class PostView extends React.Component {
       fontWeight: "bold",
       display: "flex",
       justifyContent: "center",
-      margin: ".5rem",
       padding: ".5rem 4rem",
       borderRadius: "10px",
+      width: "500px",
     };
 
     const cardStyle = {
