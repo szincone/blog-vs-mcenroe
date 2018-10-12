@@ -75,7 +75,7 @@ class PostView extends React.Component {
       color: "#ffffff",
       fontWeight: "bold",
       borderRadius: "10px",
-      fontSize: "1.5rem",
+      fontSize: "1.2rem",
       border: "1.5px solid white",
       cursor: "pointer",
     };
