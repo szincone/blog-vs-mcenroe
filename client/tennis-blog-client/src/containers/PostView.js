@@ -43,6 +43,11 @@ class PostView extends React.Component {
       textShadow: "#FC0 0px 0 25px",
     };
 
+    const h2Style = {
+      fontSize: "1.5rem",
+      margin: "1rem 0",
+    };
+
     const cardStyle = {
       border: "1px solid black",
       height: "500px",
@@ -52,6 +57,7 @@ class PostView extends React.Component {
       background: "#ffffff",
       borderRadius: "10px",
       padding: "1rem",
+      textAlign: "center",
     };
 
     const cardContainerStyle = {
@@ -92,9 +98,9 @@ class PostView extends React.Component {
         ) : (
           <div style={cardStyle}>
             <div>
-              <h2>Title: {this.state.title}</h2>
-              <h2>Content: {this.state.content}</h2>
-              <h2>Score: {this.state.score}</h2>
+              <h2 style={h2Style}>Title: {this.state.title}</h2>
+              <h2 style={h2Style}>Content: {this.state.content}</h2>
+              <h2 style={h2Style}>Score: {this.state.score}</h2>
             </div>
           </div>
         )}
