@@ -69,6 +69,12 @@ class PostView extends React.Component {
       marginTop: "1rem",
     };
 
+    const cardBg = {
+      background: "white",
+      padding: "0 2rem",
+      borderRadius: "10px",
+    };
+
     const buttonsDivStyle = {
       display: "flex",
       flexDirection: "row",
@@ -96,32 +102,34 @@ class PostView extends React.Component {
 
     return (
       <div className="cardContainer" style={cardContainerStyle}>
-        <header className="header" style={headerStyle}>
-          <h1 className="title" style={h1Style}>
-            Individual Post
-          </h1>
-        </header>
-        {this.props.isFetching ? (
-          <h1>Loading...</h1>
-        ) : (
-          <div style={cardStyle}>
-            <div>
-              <h2 style={h2Style}>Title: {this.state.title}</h2>
-              <h2 style={h2Style}>Content: {this.state.content}</h2>
-              <h2 style={h2Style}>Score: {this.state.score}</h2>
+        <div className="cardBg" style={cardBg}>
+          <header className="header" style={headerStyle}>
+            <h1 className="title" style={h1Style}>
+              Individual Post
+            </h1>
+          </header>
+          {this.props.isFetching ? (
+            <h1>Loading...</h1>
+          ) : (
+            <div style={cardStyle}>
+              <div>
+                <h2 style={h2Style}>Title: {this.state.title}</h2>
+                <h2 style={h2Style}>Content: {this.state.content}</h2>
+                <h2 style={h2Style}>Score: {this.state.score}</h2>
+              </div>
             </div>
+          )}
+          <div className="singlePostButtonsDiv" style={buttonsDivStyle}>
+            <Link to="/">
+              <button style={buttonStyle}>Home</button>
+            </Link>
+            <button
+              onClick={() => this.props.deletePost(this.state.id)}
+              style={buttonStyle}
+            >
+              Delete
+            </button>
           </div>
-        )}
-        <div className="singlePostButtonsDiv" style={buttonsDivStyle}>
-          <Link to="/">
-            <button style={buttonStyle}>Home</button>
-          </Link>
-          <button
-            onClick={() => this.props.deletePost(this.state.id)}
-            style={buttonStyle}
-          >
-            Delete
-          </button>
         </div>
       </div>
     );
