@@ -8,6 +8,7 @@ import PostView from "./containers/PostView";
 
 class App extends Component {
   state = {};
+
   componentDidMount() {
     this.props.fetchPosts();
   }

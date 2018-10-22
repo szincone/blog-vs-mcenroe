@@ -10,7 +10,7 @@ module.exports = {
   async getPost(id) {
     return await db(`Post`)
       .where({
-        id: id,
+        id,
       })
       .select();
   },
@@ -31,7 +31,7 @@ module.exports = {
   async delPost(id) {
     return await db(`Post`)
       .where({
-        id: id,
+        id,
       })
       .del();
   },
