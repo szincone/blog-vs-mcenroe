@@ -6,7 +6,12 @@ export const NavBar = () => {
     <div className="navBarDiv">
       <div className="mainNavButtonsDiv">
         <h1>Tennis</h1>
-        <h1>Blog 🎾</h1>
+        <h1>
+          Blog{" "}
+          <span role="img" aria-label="tennis emoji">
+            🎾
+          </span>
+        </h1>
         <Link to="/">
           <button>View All</button>
         </Link>
