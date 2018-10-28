@@ -168,8 +168,8 @@ a {
 .navBarDiv {
   text-align: start;
   padding: 1rem;
-  background: #d7d7d7;
-  color: #2c363f;
+  background: #ffffff;
+  color: #e75a7c;
   position: fixed;
   font-size: 2rem;
   font-weight: bold;
@@ -178,7 +178,7 @@ a {
   z-index: 1;
   top: 0;
   left: 0;
-  border-right: 1px solid #8b9c9d;
+  border-right: 4px solid #e75a7c;
 }
 
 .navBarDiv h1 {
@@ -191,16 +191,17 @@ a {
 .mainNavButtonsDiv button {
   margin: 1rem 0;
   padding: 1rem;
-  width: 250px;
+  width: 200px;
   background: #e75a7c;
   color: white;
   font-size: 1.5rem;
   font-weight: bold;
   border: 1px solid #2c363f;
+  border-radius: 10px;
   cursor: pointer;
 }
 
 .mainNavButtonsDiv button:hover {
-  background: #e75a7c;
+  background: #2c363f;
 }
 /* end nav bar */

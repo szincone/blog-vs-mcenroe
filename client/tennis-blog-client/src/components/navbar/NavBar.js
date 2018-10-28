@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 export const NavBar = () => {
   return (
     <div className="navBarDiv">
-      <h1>Tennis</h1>
-      <h1>Blog</h1>
       <div className="mainNavButtonsDiv">
+        <h1>Tennis</h1>
+        <h1>Blog 🎾</h1>
         <Link to="/">
-          <button>View Your Notes</button>
+          <button>View All</button>
         </Link>
         <Link to="/new-note">
-          <button>+ Create New Note</button>
+          <button>Create New</button>
         </Link>
       </div>
     </div>
