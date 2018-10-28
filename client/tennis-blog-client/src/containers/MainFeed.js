@@ -15,7 +15,7 @@ function MainFeed(props) {
       <h1 style={h1Style}>Tennis-Blog</h1>
       <div className="posts-container">
         {props.posts.map(post => (
-          <NavLink to={`/${post.id}`} key={post.id}>
+          <NavLink to={`/all-notes/${post.id}`} key={post.id}>
             <Post {...post} />
           </NavLink>
         ))}

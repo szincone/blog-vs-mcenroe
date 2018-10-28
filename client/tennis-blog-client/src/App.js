@@ -4,11 +4,15 @@ import { withRouter, Route } from "react-router-dom";
 import { fetchPosts, fetchPostID, deletePost } from "./actions/index";
 import MainFeed from "./containers/MainFeed.js";
 import PostView from "./containers/PostView.js";
+import NewPost from "./containers/NewPost.js";
 import { NavBar } from "./components/navbar/NavBar.js";
 import "./App.css";
 
 class App extends Component {
-  state = {};
+  state = {
+    // redirect
+    redirect: false,
+  };
 
   componentDidMount() {
     this.props.fetchPosts();
@@ -19,13 +23,25 @@ class App extends Component {
         <Route path="/" component={NavBar} />
         <Route
           exact
-          path="/"
+          path="/all-notes"
           render={props => <MainFeed {...props} {...this.props} />}
         />
         <Route
           exact
-          path="/:id"
+          path="/all-notes/:id"
           render={props => <PostView {...props} {...this.props} />}
+        />
+        <Route
+          path="/create-note"
+          render={props => (
+            <NewPost
+              {...props}
+              {...this.props}
+              // inputChangeHandler={this.inputChangeHandler}
+              // submitNewNoteHandler={this.submitNewNoteHandler}
+              // renderRedirect={this.renderRedirect}
+            />
+          )}
         />
       </Fragment>
     );

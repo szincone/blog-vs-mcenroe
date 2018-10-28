@@ -15,15 +15,15 @@ class PostView extends React.Component {
     loaded: false,
   };
 
-  componentDidMount() {
-    const post = this.props.posts.filter(post => post.id === this.state.id)[0];
-    this.setState({
-      title: post.title,
-      content: post.content,
-      score: post.score,
-      loaded: true,
-    });
-  }
+  // componentDidMount() {
+  //   const post = this.props.posts.filter(post => post.id === this.state.id)[0];
+  //   this.setState({
+  //     title: post.title,
+  //     content: post.content,
+  //     score: post.score,
+  //     loaded: true,
+  //   });
+  // }
 
   render() {
     const headerStyle = {
@@ -119,7 +119,7 @@ class PostView extends React.Component {
             </div>
           )}
           <div className="singlePostButtonsDiv" style={buttonsDivStyle}>
-            <Link to="/">
+            <Link to="/all-notes">
               <button style={buttonStyle}>Home</button>
             </Link>
             <button
