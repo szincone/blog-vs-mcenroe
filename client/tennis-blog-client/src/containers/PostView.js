@@ -15,15 +15,17 @@ class PostView extends React.Component {
     loaded: false,
   };
 
-  // componentDidMount() {
-  //   const post = this.props.posts.filter(post => post.id === this.state.id)[0];
-  //   this.setState({
-  //     title: post.title,
-  //     content: post.content,
-  //     score: post.score,
-  //     loaded: true,
-  //   });
-  // }
+  componentDidMount() {
+    console.log("POST", this.props.posts);
+    const post = this.props.posts.filter(post => post.id === this.state.id);
+    console.log("POST Individual", post);
+    this.setState({
+      title: post.title,
+      content: post.content,
+      score: post.score,
+      loaded: true,
+    });
+  }
 
   render() {
     const headerStyle = {
