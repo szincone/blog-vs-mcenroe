@@ -2,9 +2,10 @@ import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import { withRouter, Route } from "react-router-dom";
 import { fetchPosts, fetchPostID, deletePost } from "./actions/index";
+import MainFeed from "./containers/MainFeed.js";
+import PostView from "./containers/PostView.js";
+import { NavBar } from "./components/navbar/NavBar.js";
 import "./App.css";
-import MainFeed from "./containers/MainFeed";
-import PostView from "./containers/PostView";
 
 class App extends Component {
   state = {};
@@ -15,6 +16,7 @@ class App extends Component {
   render() {
     return (
       <Fragment>
+        <Route path="/" component={NavBar} />
         <Route
           exact
           path="/"
