@@ -41,7 +41,7 @@ class PostView extends React.Component {
       display: "flex",
       justifyContent: "center",
       padding: ".5rem 4rem",
-      borderRadius: "10px",
+      borderRadius: "3px",
       width: "500px",
     };
 
@@ -64,7 +64,7 @@ class PostView extends React.Component {
       display: "flex",
       flexDirection: "column",
       background: "#ffffff",
-      borderRadius: "10px",
+      borderRadius: "3px",
       padding: "1rem",
       textAlign: "center",
     };
@@ -74,13 +74,11 @@ class PostView extends React.Component {
       justifyContent: "center",
       flexDirection: "column",
       alignItems: "center",
-      marginTop: "1rem",
     };
 
     const cardBg = {
       background: "white",
       padding: "0 2rem",
-      borderRadius: "10px",
     };
 
     const buttonsDivStyle = {
@@ -91,7 +89,6 @@ class PostView extends React.Component {
       fontWeight: "bold",
       justifyContent: "center",
       padding: ".5rem 4rem",
-      borderRadius: "10px",
       width: "500px",
     };
 
@@ -101,7 +98,7 @@ class PostView extends React.Component {
       background: "#e75a7c",
       color: "#ffffff",
       fontWeight: "bold",
-      borderRadius: "10px",
+      borderRadius: "3px",
       fontSize: "1.2rem",
       border: "1.5px solid white",
       cursor: "pointer",

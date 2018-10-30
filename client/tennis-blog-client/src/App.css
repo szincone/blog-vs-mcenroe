@@ -139,7 +139,7 @@ table {
 }
 
 body {
-  background: #2c363f;
+  background: #ffffff;
 }
 
 .main-container {
@@ -147,16 +147,14 @@ body {
   max-width: 800px;
   width: 100%;
   padding: 0 1rem;
-  background: #e75a7c;
-  border-radius: 10px;
+  background: #ffffff;
 }
 
 .posts-container {
   display: flex;
   flex-wrap: wrap;
   padding: 0 2rem;
-  background: #f2f5ea;
-  border-radius: 10px;
+  background: #ffffff;
 }
 
 a {
@@ -197,11 +195,11 @@ a {
   font-size: 1.5rem;
   font-weight: bold;
   border: 1px solid #2c363f;
-  border-radius: 10px;
+  border-radius: 3px;
   cursor: pointer;
 }
 
 .mainNavButtonsDiv button:hover {
-  background: #2c363f;
+  background: #2ca58d;
 }
 /* end nav bar */

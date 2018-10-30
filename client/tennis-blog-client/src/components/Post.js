@@ -8,12 +8,12 @@ const divStyle = {
   height: "225px",
   textAlign: "center",
   margin: "1rem 1.5rem",
-  borderRadius: "10px",
+  borderRadius: "3px",
   fontSize: "1.5rem",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  boxShadow: "#E75A7C 10px 10px",
+  boxShadow: "#2CA58D 10px 10px",
 };
 
 function Post(props) {
