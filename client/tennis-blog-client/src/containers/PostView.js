@@ -16,7 +16,13 @@ class PostView extends React.Component {
   };
 
   componentDidMount() {
+    console.log(
+      this.props.location.pathname.substring(
+        this.props.location.pathname.length - 2,
+      ),
+    );
     console.log("POST", this.props.posts);
+    console.log("POST ID", this.state.id);
     const post = this.props.posts.filter(post => post.id === this.state.id);
     console.log("POST Individual", post);
     this.setState({
