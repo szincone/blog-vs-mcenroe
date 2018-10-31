@@ -41,7 +41,6 @@ class PostView extends React.Component {
       display: "flex",
       justifyContent: "center",
       padding: ".5rem 4rem",
-      borderRadius: "3px",
       width: "500px",
     };
 
@@ -64,7 +63,6 @@ class PostView extends React.Component {
       display: "flex",
       flexDirection: "column",
       background: "#ffffff",
-      borderRadius: "3px",
       padding: "1rem",
       textAlign: "center",
     };
@@ -84,7 +82,7 @@ class PostView extends React.Component {
     const buttonsDivStyle = {
       display: "flex",
       flexDirection: "row",
-      background: "rgb(231, 90, 124)",
+      background: "#2ca58d",
       color: "#ffffff",
       fontWeight: "bold",
       justifyContent: "center",
