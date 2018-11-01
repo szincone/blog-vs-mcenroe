@@ -6,29 +6,19 @@ class PostView extends React.Component {
     title: "",
     content: "",
     score: 0,
-    id: Number(
-      this.props.location.pathname.substring(
-        1,
-        this.props.location.pathname.length,
-      ),
-    ),
+    // gets number at end of url string returns object, 0 index
+    // is our number, turn into number
+    id: parseInt(this.props.location.pathname.match(/\d+$/)[0], 10),
     loaded: false,
   };
 
   componentDidMount() {
-    console.log(
-      this.props.location.pathname.substring(
-        this.props.location.pathname.length - 2,
-      ),
-    );
-    console.log("POST", this.props.posts);
-    console.log("POST ID", this.state.id);
     const post = this.props.posts.filter(post => post.id === this.state.id);
-    console.log("POST Individual", post);
+    // access first item in post object which is our matching post
     this.setState({
-      title: post.title,
-      content: post.content,
-      score: post.score,
+      title: post[0].title,
+      content: post[0].content,
+      score: post[0].score,
       loaded: true,
     });
   }
