@@ -32,6 +32,8 @@ class PostView extends React.Component {
       justifyContent: "center",
       padding: ".5rem 4rem",
       width: "500px",
+      border: "1px solid black",
+      borderBottom: "none",
     };
 
     const h1Style = {
@@ -63,6 +65,7 @@ class PostView extends React.Component {
       flexDirection: "column",
       alignItems: "center",
       marginLeft: "8rem",
+      marginTop: "1rem",
     };
 
     const cardBg = {
@@ -79,6 +82,8 @@ class PostView extends React.Component {
       justifyContent: "center",
       padding: ".5rem 4rem",
       width: "500px",
+      border: "1px solid black",
+      borderTop: "none",
     };
 
     const buttonStyle = {
