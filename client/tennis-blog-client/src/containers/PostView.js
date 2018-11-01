@@ -41,7 +41,6 @@ class PostView extends React.Component {
       textAlign: "center",
       fontSize: "2rem",
       color: "white",
-      textShadow: "#FC0 0px 0 25px",
     };
 
     const h2Style = {
