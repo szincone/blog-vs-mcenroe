@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const NewPost = () => {
   const newNoteDivStyle = {
@@ -26,6 +27,30 @@ export const NewPost = () => {
     fontSize: "2rem",
     color: "white",
   };
+  const footerDivStyle = {
+    display: "flex",
+    flexDirection: "row",
+    background: "#2ca58d",
+    color: "#ffffff",
+    fontWeight: "bold",
+    justifyContent: "center",
+    padding: ".5rem 4rem",
+    width: "500px",
+    border: "1px solid black",
+    borderTop: "none",
+    borderRadius: "0 0 3px 3px",
+  };
+  const footerButtonsStyle = {
+    display: "flex",
+    margin: "0 1rem",
+    background: "#e75a7c",
+    color: "#ffffff",
+    fontWeight: "bold",
+    borderRadius: "3px",
+    fontSize: "1.2rem",
+    border: "1.5px solid white",
+    cursor: "pointer",
+  };
   return (
     <div className="newNoteMainDiv" style={newNoteDivStyle}>
       {/* {this.props.renderRedirect()} */}
@@ -48,7 +73,17 @@ export const NewPost = () => {
           // onChange={this.props.inputChangeHandler}
           className="inputContent"
         />
-        <button>Save</button>
+        <div className="newNoteFooter" style={footerDivStyle}>
+          <Link to="/all-notes">
+            <button style={footerButtonsStyle}>Home</button>
+          </Link>
+          <button
+            onClick={() => this.props.savePost(this.state.id)}
+            style={footerButtonsStyle}
+          >
+            Save
+          </button>
+        </div>
       </form>
     </div>
   );
