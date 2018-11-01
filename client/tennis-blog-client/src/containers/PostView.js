@@ -34,6 +34,7 @@ class PostView extends React.Component {
       width: "500px",
       border: "1px solid black",
       borderBottom: "none",
+      borderRadius: "3px 3px 0 0",
     };
 
     const h1Style = {
@@ -84,6 +85,7 @@ class PostView extends React.Component {
       width: "500px",
       border: "1px solid black",
       borderTop: "none",
+      borderRadius: "0 0 3px 3px",
     };
 
     const buttonStyle = {
