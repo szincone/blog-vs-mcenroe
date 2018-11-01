@@ -29,6 +29,23 @@ export const NewPost = () => {
   };
   const inputsDiv = {
     border: "1px solid black",
+    display: "flex",
+    minHeight: "28rem",
+    flexDirection: "column",
+  };
+  const titleInputStyle = {
+    marginTop: "1rem",
+    height: "2rem",
+    border: "1px solid black",
+    borderRight: "none",
+    borderLeft: "none",
+  };
+  const contentInputStyle = {
+    minHeight: "14rem",
+    borderBottom: "1px solid black",
+    borderTop: "none",
+    borderRight: "none",
+    borderLeft: "none",
   };
   const footerDivStyle = {
     display: "flex",
@@ -70,12 +87,14 @@ export const NewPost = () => {
             name="title"
             // onChange={this.props.inputChangeHandler}
             className="inputTitle"
+            style={titleInputStyle}
           />
           <textarea
             placeholder="Note Content"
             name="content"
             // onChange={this.props.inputChangeHandler}
             className="inputContent"
+            style={contentInputStyle}
           />
         </div>
         <div className="newNoteFooter" style={footerDivStyle}>
