@@ -27,6 +27,9 @@ export const NewPost = () => {
     fontSize: "2rem",
     color: "white",
   };
+  const inputsDiv = {
+    border: "1px solid black",
+  };
   const footerDivStyle = {
     display: "flex",
     flexDirection: "row",
@@ -61,18 +64,20 @@ export const NewPost = () => {
         className="newNoteForm"
         // onSubmit={this.props.submitNewNoteHandler}
       >
-        <input
-          placeholder="Note Title"
-          name="title"
-          // onChange={this.props.inputChangeHandler}
-          className="inputTitle"
-        />
-        <textarea
-          placeholder="Note Content"
-          name="content"
-          // onChange={this.props.inputChangeHandler}
-          className="inputContent"
-        />
+        <div style={inputsDiv}>
+          <input
+            placeholder="Note Title"
+            name="title"
+            // onChange={this.props.inputChangeHandler}
+            className="inputTitle"
+          />
+          <textarea
+            placeholder="Note Content"
+            name="content"
+            // onChange={this.props.inputChangeHandler}
+            className="inputContent"
+          />
+        </div>
         <div className="newNoteFooter" style={footerDivStyle}>
           <Link to="/all-notes">
             <button style={footerButtonsStyle}>Home</button>
