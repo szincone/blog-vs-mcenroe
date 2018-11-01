@@ -3,6 +3,7 @@ import {
   FETCH_SUCCESS,
   FETCH_FAILURE,
   FETCHING_POST,
+  ADD_NEW_POST,
   DEL_POST,
   DELETED_POST,
 } from "../actions";
@@ -40,17 +41,24 @@ export const rootReducer = (state = initialState, action) => {
         isFetched: false,
         hasError: action.payload,
       };
-    case DEL_POST: 
+    case DEL_POST:
       return {
         ...state,
-        isDeleting: true
-      }
+        isDeleting: true,
+      };
     case DELETED_POST:
       return {
         ...state,
         isDeleting: false,
-        posts: state.posts.filter(post => post.id !== action.payload)
-      }
+        posts: state.posts.filter(post => post.id !== action.payload),
+      };
+    case ADD_NEW_POST:
+      return {
+        ...state,
+        smurfs: action.payload,
+        isFetching: false,
+        isFetched: true,
+      };
     default:
       return state;
   }
