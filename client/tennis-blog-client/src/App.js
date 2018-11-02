@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
-import { withRouter, Route } from "react-router-dom";
+import { withRouter, Route, Redirect } from "react-router-dom";
 import { fetchPosts, fetchPostID, deletePost } from "./actions/index";
 import MainFeed from "./containers/MainFeed.js";
 import PostView from "./containers/PostView.js";
@@ -20,6 +20,7 @@ class App extends Component {
   render() {
     return (
       <Fragment>
+        <Redirect from="/" to="/all-notes" />
         <Route path="/" component={NavBar} />
         <Route
           exact
