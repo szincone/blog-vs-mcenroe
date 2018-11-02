@@ -8,6 +8,7 @@ const divStyle = {
   height: "225px",
   textAlign: "center",
   margin: "1rem 1.5rem",
+  padding: "1rem",
   borderRadius: "3px",
   fontSize: "1.5rem",
   display: "flex",

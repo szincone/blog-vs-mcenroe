@@ -7,26 +7,42 @@ exports.seed = function(knex, Promise) {
       return knex("Post").insert([
         {
           title:
-            "Fed square the bulldogs, don dons emerald peacock ball don't paint over the banksy's the hawks, warehouse chic cookie dame edna.",
+            "Morbo's good friend, Richard Nixon. Yeah. Give a little credit to our public schools.",
           content:
-            "Four seasons in one day richmond tigers, prahran hipsters swanston fairy penguins naked for satan kylie minogue, dandenong brown alley geoffrey rush spiegeltent melb, the croft institute Rod Laver empire of the sun the australian open swanston, the espy rooftop bars flemington racecourse.",
+            "Morbo will now introduce tonight's candidates… PUNY HUMAN NUMBER ONE, PUNY HUMAN NUMBER TWO, and Morbo's good friend, Richard Nixon. Yeah. Give a little credit to our public schools. There's one way and only one way to determine if an animal is intelligent. Dissect its brain! \n Morbo will now introduce tonight's candidates… PUNY HUMAN NUMBER ONE, PUNY HUMAN NUMBER TWO, and Morbo's good friend, Richard Nixon. Yeah. Give a little credit to our public schools. There's one way and only one way to determine if an animal is intelligent. Dissect its brain! \n Morbo will now introduce tonight's candidates… PUNY HUMAN NUMBER ONE, PUNY HUMAN NUMBER TWO, and Morbo's good friend, Richard Nixon. Yeah. Give a little credit to our public schools. There's one way and only one way to determine if an animal is intelligent. Dissect its brain!",
+          score: 50,
+          time_stamp: new Date(),
+        },
+        {
+          title:
+            "Joey, burn down the ship. Clamps, burn down the crew. I was having the most wonderful dream.",
+          content:
+            "Why did you bring us here? Yeah, lots of people did. Alright, let's mafia things up a bit. Joey, burn down the ship. Clamps, burn down the crew. I was having the most wonderful dream. Except you were there, and you were there, and you were there! \n Why did you bring us here? Yeah, lots of people did. Alright, let's mafia things up a bit. Joey, burn down the ship. Clamps, burn down the crew. I was having the most wonderful dream. Except you were there, and you were there, and you were there! \n Why did you bring us here? Yeah, lots of people did. Alright, let's mafia things up a bit. Joey, burn down the ship. Clamps, burn down the crew. I was having the most wonderful dream. Except you were there, and you were there, and you were there! \n Why did you bring us here? Yeah, lots of people did. Alright, let's mafia things up a bit. Joey, burn down the ship. Clamps, burn down the crew. I was having the most wonderful dream. Except you were there, and you were there, and you were there!",
           score: 0,
           time_stamp: new Date(),
         },
         {
           title:
-            "Purple emerald swanston, ball kath and kim NGV culture fix collingwood ferals temper trap, chapel street fairy penguins carlton.",
+            "You'll have all the Slurm you can drink when you're partying with Slurms McKenzie!",
           content:
-            "Citylink laksa king, lygon street spruikers flemington racecourse world's most liveable city richmond tigers don't paint over the banksy's, collins place prahran hipsters myki queues carlton burlesque, yarra geoffrey rush kylie minogue brown alley vic market, secret laneway bars hook turns south of the river.",
-          score: 0,
-          time_stamp: new Date(),
-        },
-        {
-          title:
-            "Yarra tullamarine, secret laneway bars collins place street art aami park shane warne, prahran hipsters MSAC food bloggers.",
-          content:
-            "Bespectacled girls chapel street, rocking out the espy don dons melbourne central aami park north melbourne shinboners, moomba the australian open old melbourne gaol chopper read emerald peacock, rooftop cinema geoffrey rush the borek woman street art collingwood ferals, the croft institute richmond tigers temper trap.",
+            "Man, I'm sore all over. I feel like I just went ten rounds with mighty Thor. You'll have all the Slurm you can drink when you're partying with Slurms McKenzie! You've killed me! Oh, you've killed me! You guys realize you live in a sewer, right? \n Man, I'm sore all over. I feel like I just went ten rounds with mighty Thor. You'll have all the Slurm you can drink when you're partying with Slurms McKenzie! You've killed me! Oh, you've killed me! You guys realize you live in a sewer, right? \n Man, I'm sore all over. I feel like I just went ten rounds with mighty Thor. You'll have all the Slurm you can drink when you're partying with Slurms McKenzie! You've killed me! Oh, you've killed me! You guys realize you live in a sewer, right? \n Man, I'm sore all over. I feel like I just went ten rounds with mighty Thor. You'll have all the Slurm you can drink when you're partying with Slurms McKenzie! You've killed me! Oh, you've killed me! You guys realize you live in a sewer, right?",
           score: 100,
+          time_stamp: new Date(),
+        },
+        {
+          title:
+            "Son, as your lawyer, I declare y'all are in a 12-piece bucket o' trouble.",
+          content:
+            "Fry, you can't just sit here in the dark listening to classical music. Who are those horrible orange men? Say it in Russian! Daylight and everything. Son, as your lawyer, I declare y'all are in a 12-piece bucket o' trouble. But I done struck you a deal: Five hours of community service cleanin' up that ol' mess you caused. \n Fry, you can't just sit here in the dark listening to classical music. Who are those horrible orange men? Say it in Russian! Daylight and everything. Son, as your lawyer, I declare y'all are in a 12-piece bucket o' trouble. But I done struck you a deal: Five hours of community service cleanin' up that ol' mess you caused. \n Fry, you can't just sit here in the dark listening to classical music. Who are those horrible orange men? Say it in Russian! Daylight and everything. Son, as your lawyer, I declare y'all are in a 12-piece bucket o' trouble. But I done struck you a deal: Five hours of community service cleanin' up that ol' mess you caused. \n Fry, you can't just sit here in the dark listening to classical music. Who are those horrible orange men? Say it in Russian! Daylight and everything. Son, as your lawyer, I declare y'all are in a 12-piece bucket o' trouble. But I done struck you a deal: Five hours of community service cleanin' up that ol' mess you caused.",
+          score: 125,
+          time_stamp: new Date(),
+        },
+        {
+          title:
+            "You may have to metaphorically make a deal with the devil. And by 'devil', I mean Robot Devil.",
+          content:
+            "I don't 'need' to drink. I can quit anytime I want! Oh, but you can. But you may have to metaphorically make a deal with the devil. And by 'devil', I mean Robot Devil. And by 'metaphorically', I mean get your coat. \n I don't 'need' to drink. I can quit anytime I want! Oh, but you can. But you may have to metaphorically make a deal with the devil. And by 'devil', I mean Robot Devil. And by 'metaphorically', I mean get your coat. \n I don't 'need' to drink. I can quit anytime I want! Oh, but you can. But you may have to metaphorically make a deal with the devil. And by 'devil', I mean Robot Devil. And by 'metaphorically', I mean get your coat. \n I don't 'need' to drink. I can quit anytime I want! Oh, but you can. But you may have to metaphorically make a deal with the devil. And by 'devil', I mean Robot Devil. And by 'metaphorically', I mean get your coat. \n I don't 'need' to drink. I can quit anytime I want! Oh, but you can. But you may have to metaphorically make a deal with the devil. And by 'devil', I mean Robot Devil. And by 'metaphorically', I mean get your coat.",
+          score: 225,
           time_stamp: new Date(),
         },
       ]);
