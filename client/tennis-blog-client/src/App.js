@@ -21,10 +21,11 @@ class App extends Component {
     this.props.fetchPosts();
   }
   inputChangeHandler = event => {
-    console.log("INPUT CHANGE", event.target.value);
     this.setState({ [event.target.name]: event.target.value });
   };
   render() {
+    console.log("TITLE", this.state.title);
+    console.log("CONTENT", this.state.content);
     return (
       <Fragment>
         <Redirect from="/" to="/all-notes" />
