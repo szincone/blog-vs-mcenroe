@@ -7,14 +7,6 @@ exports.seed = function(knex, Promise) {
       return knex("Post").insert([
         {
           title:
-            "Morbo's good friend, Richard Nixon. Yeah. Give a little credit to our public schools.",
-          content:
-            "Morbo will now introduce tonight's candidates… PUNY HUMAN NUMBER ONE, PUNY HUMAN NUMBER TWO, and Morbo's good friend, Richard Nixon. Yeah. Give a little credit to our public schools. There's one way and only one way to determine if an animal is intelligent. Dissect its brain! \n Morbo will now introduce tonight's candidates… PUNY HUMAN NUMBER ONE, PUNY HUMAN NUMBER TWO, and Morbo's good friend, Richard Nixon. Yeah. Give a little credit to our public schools. There's one way and only one way to determine if an animal is intelligent. Dissect its brain! \n Morbo will now introduce tonight's candidates… PUNY HUMAN NUMBER ONE, PUNY HUMAN NUMBER TWO, and Morbo's good friend, Richard Nixon. Yeah. Give a little credit to our public schools. There's one way and only one way to determine if an animal is intelligent. Dissect its brain!",
-          score: 50,
-          time_stamp: new Date(),
-        },
-        {
-          title:
             "Joey, burn down the ship. Clamps, burn down the crew. I was having the most wonderful dream.",
           content:
             "Why did you bring us here? Yeah, lots of people did. Alright, let's mafia things up a bit. Joey, burn down the ship. Clamps, burn down the crew. I was having the most wonderful dream. Except you were there, and you were there, and you were there! \n Why did you bring us here? Yeah, lots of people did. Alright, let's mafia things up a bit. Joey, burn down the ship. Clamps, burn down the crew. I was having the most wonderful dream. Except you were there, and you were there, and you were there! \n Why did you bring us here? Yeah, lots of people did. Alright, let's mafia things up a bit. Joey, burn down the ship. Clamps, burn down the crew. I was having the most wonderful dream. Except you were there, and you were there, and you were there! \n Why did you bring us here? Yeah, lots of people did. Alright, let's mafia things up a bit. Joey, burn down the ship. Clamps, burn down the crew. I was having the most wonderful dream. Except you were there, and you were there, and you were there!",
@@ -27,6 +19,14 @@ exports.seed = function(knex, Promise) {
           content:
             "Man, I'm sore all over. I feel like I just went ten rounds with mighty Thor. You'll have all the Slurm you can drink when you're partying with Slurms McKenzie! You've killed me! Oh, you've killed me! You guys realize you live in a sewer, right? \n Man, I'm sore all over. I feel like I just went ten rounds with mighty Thor. You'll have all the Slurm you can drink when you're partying with Slurms McKenzie! You've killed me! Oh, you've killed me! You guys realize you live in a sewer, right? \n Man, I'm sore all over. I feel like I just went ten rounds with mighty Thor. You'll have all the Slurm you can drink when you're partying with Slurms McKenzie! You've killed me! Oh, you've killed me! You guys realize you live in a sewer, right? \n Man, I'm sore all over. I feel like I just went ten rounds with mighty Thor. You'll have all the Slurm you can drink when you're partying with Slurms McKenzie! You've killed me! Oh, you've killed me! You guys realize you live in a sewer, right?",
           score: 100,
+          time_stamp: new Date(),
+        },
+        {
+          title:
+            "Morbo's good friend, Richard Nixon. Yeah. Give a little credit to our public schools.",
+          content:
+            "Morbo will now introduce tonight's candidates… PUNY HUMAN NUMBER ONE, PUNY HUMAN NUMBER TWO, and Morbo's good friend, Richard Nixon. Yeah. Give a little credit to our public schools. There's one way and only one way to determine if an animal is intelligent. Dissect its brain! \n Morbo will now introduce tonight's candidates… PUNY HUMAN NUMBER ONE, PUNY HUMAN NUMBER TWO, and Morbo's good friend, Richard Nixon. Yeah. Give a little credit to our public schools. There's one way and only one way to determine if an animal is intelligent. Dissect its brain! \n Morbo will now introduce tonight's candidates… PUNY HUMAN NUMBER ONE, PUNY HUMAN NUMBER TWO, and Morbo's good friend, Richard Nixon. Yeah. Give a little credit to our public schools. There's one way and only one way to determine if an animal is intelligent. Dissect its brain!",
+          score: 50,
           time_stamp: new Date(),
         },
         {

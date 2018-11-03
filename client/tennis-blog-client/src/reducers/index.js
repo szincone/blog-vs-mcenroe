@@ -55,7 +55,6 @@ export const rootReducer = (state = initialState, action) => {
     case ADD_NEW_POST:
       return {
         ...state,
-        smurfs: action.payload,
         isFetching: false,
         isFetched: true,
       };

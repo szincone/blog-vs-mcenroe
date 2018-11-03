@@ -50,7 +50,7 @@ class PostView extends React.Component {
 
     const cardStyle = {
       border: "1px solid black",
-      height: "500px",
+      minHeight: "500px",
       width: "500px",
       display: "flex",
       flexDirection: "column",
