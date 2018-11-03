@@ -56,7 +56,7 @@ export const addNewPost = post => {
   return function(dispatch) {
     dispatch({ type: FETCHING_POST });
     axios
-      .post(URL, post)
+      .post(`${URL}/posts`, post)
       .then(response =>
         dispatch({ type: ADD_NEW_POST, payload: response.data }),
       )
