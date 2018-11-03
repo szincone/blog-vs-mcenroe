@@ -12,6 +12,9 @@ class App extends Component {
   state = {
     // redirect
     redirect: false,
+    // newpost
+    title: "",
+    content: "",
   };
 
   componentDidMount() {
