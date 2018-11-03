@@ -38,7 +38,7 @@ class App extends Component {
     };
     this.props.addNewPost(addedPost);
     this.setState({ title: "", content: "" });
-    setTimeout(() => this.setState({ redirect: true }));
+    setTimeout(() => this.setState({ redirect: true }), 200);
   };
   // redirect
   renderRedirect = () => {
