@@ -8,7 +8,6 @@ const morgan = require("morgan");
 const postRoutes = require("../routes/postRoute.js");
 
 function errorHandler(err, req, res, next) {
-  console.log(err);
   switch (err.code) {
     case 404:
       res.status(404).json({

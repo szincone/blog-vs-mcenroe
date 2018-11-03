@@ -71,7 +71,6 @@ export const NewPost = props => {
     border: "1.5px solid white",
     cursor: "pointer",
   };
-  console.log("PROPS", props);
   return (
     <div className="newNoteMainDiv" style={newNoteDivStyle}>
       {props.renderRedirect()}
