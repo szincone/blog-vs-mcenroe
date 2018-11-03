@@ -25,9 +25,11 @@ class App extends Component {
   componentDidMount() {
     this.props.fetchPosts();
   }
+
   inputChangeHandler = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
+
   submitNewPostHandler = event => {
     event.preventDefault();
     const addedPost = {
@@ -36,7 +38,19 @@ class App extends Component {
     };
     this.props.addNewPost(addedPost);
     this.setState({ title: "", content: "" });
+    setTimeout(() => this.setState({ redirect: true }));
   };
+  // redirect
+  renderRedirect = () => {
+    if (this.state.redirect) {
+      this.setState({ redirect: false });
+      window.location.reload();
+      return <Redirect to="/all-notes" />;
+    } else {
+      // do nothing
+    }
+  };
+
   render() {
     if (!this.props.location.pathname.includes("note")) {
       return <Redirect from="/" to="/all-notes" />;
@@ -62,7 +76,7 @@ class App extends Component {
                 {...this.props}
                 inputChangeHandler={this.inputChangeHandler}
                 submitNewPostHandler={this.submitNewPostHandler}
-                // renderRedirect={this.renderRedirect}
+                renderRedirect={this.renderRedirect}
               />
             )}
           />

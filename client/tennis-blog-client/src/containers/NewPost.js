@@ -74,6 +74,7 @@ export const NewPost = props => {
   console.log("PROPS", props);
   return (
     <div className="newNoteMainDiv" style={newNoteDivStyle}>
+      {props.renderRedirect()}
       <header style={newNoteHeaderStyle}>
         <h1 style={newNoteH1Style}>New Note:</h1>
       </header>
