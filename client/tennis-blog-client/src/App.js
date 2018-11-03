@@ -17,6 +17,9 @@ class App extends Component {
   componentDidMount() {
     this.props.fetchPosts();
   }
+  inputChangeHandler = event => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
   render() {
     return (
       <Fragment>
