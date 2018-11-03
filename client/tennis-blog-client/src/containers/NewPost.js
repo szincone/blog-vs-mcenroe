@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const NewPost = () => {
+export const NewPost = props => {
   const newNoteDivStyle = {
     display: "flex",
     justifyContent: "center",
@@ -71,6 +71,7 @@ export const NewPost = () => {
     border: "1.5px solid white",
     cursor: "pointer",
   };
+  console.log("PROPS", props);
   return (
     <div className="newNoteMainDiv" style={newNoteDivStyle}>
       {/* {this.props.renderRedirect()} */}
@@ -85,14 +86,14 @@ export const NewPost = () => {
           <input
             placeholder="Note Title"
             name="title"
-            // onChange={this.props.inputChangeHandler}
+            onChange={props.inputChangeHandler}
             className="inputTitle"
             style={titleInputStyle}
           />
           <textarea
             placeholder="Note Content"
             name="content"
-            // onChange={this.props.inputChangeHandler}
+            onChange={props.inputChangeHandler}
             className="inputContent"
             style={contentInputStyle}
           />
