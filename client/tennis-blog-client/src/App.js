@@ -1,7 +1,12 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import { withRouter, Route, Redirect } from "react-router-dom";
-import { fetchPosts, fetchPostID, deletePost } from "./actions/index";
+import {
+  fetchPosts,
+  fetchPostID,
+  addNewPost,
+  deletePost,
+} from "./actions/index";
 import MainFeed from "./containers/MainFeed.js";
 import PostView from "./containers/PostView.js";
 import NewPost from "./containers/NewPost.js";
