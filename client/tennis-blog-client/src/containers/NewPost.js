@@ -74,7 +74,6 @@ export const NewPost = props => {
   console.log("PROPS", props);
   return (
     <div className="newNoteMainDiv" style={newNoteDivStyle}>
-      {/* {props.renderRedirect()} */}
       <header style={newNoteHeaderStyle}>
         <h1 style={newNoteH1Style}>New Note:</h1>
       </header>
@@ -99,12 +98,7 @@ export const NewPost = props => {
           <Link to="/all-notes">
             <button style={footerButtonsStyle}>Home</button>
           </Link>
-          <button
-            // onClick={() => this.props.savePost(this.state.id)}
-            style={footerButtonsStyle}
-          >
-            Save
-          </button>
+          <button style={footerButtonsStyle}>Save</button>
         </div>
       </form>
     </div>

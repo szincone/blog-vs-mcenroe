@@ -29,8 +29,7 @@ class App extends Component {
       title: this.state.title,
       content: this.state.content,
     };
-    console.log("ADDED POST", addedPost);
-    // this.props.addNewPost(addedPost);
+    this.props.addNewPost(addedPost);
     this.setState({ title: "", content: "" });
   };
   render() {
@@ -74,6 +73,7 @@ const mapStateToProps = state => {
     isFetching: state.isFetching,
     isFetched: state.isFetched,
     hasError: state.hasError,
+    addNewPost: state.addNewPost,
     deletePost: state.deletePost,
   };
 };
@@ -84,6 +84,7 @@ export default withRouter(
     {
       fetchPosts,
       fetchPostID,
+      addNewPost,
       deletePost,
     },
   )(App),
