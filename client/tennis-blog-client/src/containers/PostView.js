@@ -66,6 +66,7 @@ class PostView extends React.Component {
       alignItems: "center",
       marginLeft: "8rem",
       marginTop: "1rem",
+      marginBottom: "1rem",
     };
 
     const cardBg = {
@@ -121,6 +122,11 @@ class PostView extends React.Component {
           <div className="singlePostButtonsDiv" style={buttonsDivStyle}>
             <Link to="/all-notes">
               <button style={buttonStyle}>Home</button>
+            </Link>
+            <Link to={`/edit-note/${this.state.id}`} key={this.state.id}>
+              <button className="editButton" style={buttonStyle}>
+                Edit
+              </button>
             </Link>
             <button
               onClick={() => this.props.deletePost(this.state.id)}
