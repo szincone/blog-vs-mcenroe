@@ -34,34 +34,37 @@ class App extends Component {
     this.setState({ title: "", content: "" });
   };
   render() {
-    return (
-      <Fragment>
-        <Redirect from="/" to="/all-notes" />
-        <Route path="/" component={NavBar} />
-        <Route
-          exact
-          path="/all-notes"
-          render={props => <MainFeed {...props} {...this.props} />}
-        />
-        <Route
-          exact
-          path="/all-notes/:id"
-          render={props => <PostView {...props} {...this.props} />}
-        />
-        <Route
-          path="/create-note"
-          render={props => (
-            <NewPost
-              {...props}
-              {...this.props}
-              inputChangeHandler={this.inputChangeHandler}
-              // submitNewNoteHandler={this.submitNewNoteHandler}
-              // renderRedirect={this.renderRedirect}
-            />
-          )}
-        />
-      </Fragment>
-    );
+    if (!this.props.location.pathname.includes("/all-notes")) {
+      return <Redirect from="/" to="/all-notes" />;
+    } else {
+      return (
+        <Fragment>
+          <Route path="/" component={NavBar} />
+          <Route
+            exact
+            path="/all-notes"
+            render={props => <MainFeed {...props} {...this.props} />}
+          />
+          <Route
+            exact
+            path="/all-notes/:id"
+            render={props => <PostView {...props} {...this.props} />}
+          />
+          <Route
+            path="/create-note"
+            render={props => (
+              <NewPost
+                {...props}
+                {...this.props}
+                inputChangeHandler={this.inputChangeHandler}
+                // submitNewNoteHandler={this.submitNewNoteHandler}
+                // renderRedirect={this.renderRedirect}
+              />
+            )}
+          />
+        </Fragment>
+      );
+    }
   }
 }
 
