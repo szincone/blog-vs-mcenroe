@@ -74,13 +74,13 @@ export const NewPost = props => {
   console.log("PROPS", props);
   return (
     <div className="newNoteMainDiv" style={newNoteDivStyle}>
-      {/* {this.props.renderRedirect()} */}
+      {/* {props.renderRedirect()} */}
       <header style={newNoteHeaderStyle}>
         <h1 style={newNoteH1Style}>New Note:</h1>
       </header>
       <form
         className="newNoteForm"
-        // onSubmit={this.props.submitNewNoteHandler}
+        // onSubmit={props.submitNewNoteHandler}
       >
         <div style={inputsDiv}>
           <input

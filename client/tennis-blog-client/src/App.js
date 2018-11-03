@@ -23,9 +23,17 @@ class App extends Component {
   inputChangeHandler = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
+  submitNewPostHandler = event => {
+    event.preventDefault();
+    const addedPost = {
+      title: this.state.title,
+      content: this.state.content,
+    };
+    console.log("ADDED POST", addedPost);
+    // this.props.addNewPost(addedPost);
+    this.setState({ title: "", content: "" });
+  };
   render() {
-    console.log("TITLE", this.state.title);
-    console.log("CONTENT", this.state.content);
     return (
       <Fragment>
         <Redirect from="/" to="/all-notes" />
