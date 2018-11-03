@@ -34,7 +34,7 @@ class App extends Component {
     this.setState({ title: "", content: "" });
   };
   render() {
-    if (!this.props.location.pathname.includes("/all-notes")) {
+    if (!this.props.location.pathname.includes("note")) {
       return <Redirect from="/" to="/all-notes" />;
     } else {
       return (
