@@ -78,10 +78,7 @@ export const NewPost = props => {
       <header style={newNoteHeaderStyle}>
         <h1 style={newNoteH1Style}>New Note:</h1>
       </header>
-      <form
-        className="newNoteForm"
-        // onSubmit={props.submitNewNoteHandler}
-      >
+      <form className="newNoteForm" onSubmit={props.submitNewPostHandler}>
         <div style={inputsDiv}>
           <input
             placeholder="Note Title"
@@ -103,7 +100,7 @@ export const NewPost = props => {
             <button style={footerButtonsStyle}>Home</button>
           </Link>
           <button
-            onClick={() => this.props.savePost(this.state.id)}
+            // onClick={() => this.props.savePost(this.state.id)}
             style={footerButtonsStyle}
           >
             Save

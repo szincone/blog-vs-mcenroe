@@ -57,7 +57,7 @@ class App extends Component {
                 {...props}
                 {...this.props}
                 inputChangeHandler={this.inputChangeHandler}
-                // submitNewNoteHandler={this.submitNewNoteHandler}
+                submitNewPostHandler={this.submitNewPostHandler}
                 // renderRedirect={this.renderRedirect}
               />
             )}
