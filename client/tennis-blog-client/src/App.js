@@ -21,6 +21,7 @@ class App extends Component {
     this.props.fetchPosts();
   }
   inputChangeHandler = event => {
+    console.log("INPUT CHANGE", event.target.value);
     this.setState({ [event.target.name]: event.target.value });
   };
   render() {
@@ -44,7 +45,7 @@ class App extends Component {
             <NewPost
               {...props}
               {...this.props}
-              // inputChangeHandler={this.inputChangeHandler}
+              inputChangeHandler={this.inputChangeHandler}
               // submitNewNoteHandler={this.submitNewNoteHandler}
               // renderRedirect={this.renderRedirect}
             />
