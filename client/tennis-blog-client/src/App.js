@@ -48,7 +48,8 @@ class App extends Component {
       title: this.state.title,
       content: this.state.content,
     };
-    this.props.editPost(editedPost);
+    console.log("EDITEDPOST", editedPost);
+    // this.props.editPost(editedPost);
     this.setState({ title: "", content: "" });
     setTimeout(() => this.setState({ redirect: true }), 200);
   };

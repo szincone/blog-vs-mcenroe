@@ -63,3 +63,15 @@ export const addNewPost = post => {
     }
   };
 };
+
+export const modifyPost = (id, editedPost) => {
+  console.log("ID", id);
+  console.log("EDITEDPOST", editedPost);
+  return function(dispatch) {
+    dispatch({ type: FETCHING_POST });
+    axios
+      .put(`${URL}/posts/${id}`, editedPost)
+      .then(response => dispatch({ type: MODIFY_POST, payload: response.data }))
+      .catch(error => dispatch({ type: FETCH_FAILURE }));
+  };
+};
