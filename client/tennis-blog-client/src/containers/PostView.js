@@ -97,6 +97,17 @@ class PostView extends React.Component {
       border: "1.5px solid white",
       cursor: "pointer",
     };
+    const deleteButtonStyle = {
+      display: "flex",
+      margin: "0 1rem",
+      background: "#ffffff",
+      color: "#e75a7c",
+      fontWeight: "bold",
+      borderRadius: "3px",
+      fontSize: "1.2rem",
+      border: "1.5px solid #e75a7c",
+      cursor: "pointer",
+    };
 
     return (
       <div className="cardContainer" style={cardContainerStyle}>
@@ -129,7 +140,7 @@ class PostView extends React.Component {
             </Link>
             <button
               onClick={() => this.props.deletePost(this.state.id)}
-              style={buttonStyle}
+              style={deleteButtonStyle}
             >
               Delete
             </button>
