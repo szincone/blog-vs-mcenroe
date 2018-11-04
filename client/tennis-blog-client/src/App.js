@@ -40,6 +40,18 @@ class App extends Component {
     this.setState({ title: "", content: "" });
     setTimeout(() => this.setState({ redirect: true }), 200);
   };
+
+  editPostHandler = event => {
+    event.preventDefault();
+    const editedPost = {
+      title: this.state.title,
+      content: this.state.content,
+    };
+    this.props.editPost(editedPost);
+    this.setState({ title: "", content: "" });
+    setTimeout(() => this.setState({ redirect: true }), 200);
+  };
+
   // redirect
   renderRedirect = () => {
     if (this.state.redirect) {
