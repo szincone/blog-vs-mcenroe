@@ -10,6 +10,7 @@ import {
 import MainFeed from "./containers/MainFeed.js";
 import PostView from "./containers/PostView.js";
 import NewPost from "./containers/NewPost.js";
+import EditPost from "./containers/EditPost.js";
 import { NavBar } from "./components/navbar/NavBar.js";
 import "./App.css";
 
@@ -94,6 +95,18 @@ class App extends Component {
                 {...this.props}
                 inputChangeHandler={this.inputChangeHandler}
                 submitNewPostHandler={this.submitNewPostHandler}
+                renderRedirect={this.renderRedirect}
+              />
+            )}
+          />
+          <Route
+            path="/edit-note"
+            render={props => (
+              <EditPost
+                {...props}
+                {...this.props}
+                inputChangeHandler={this.inputChangeHandler}
+                editPostHandler={this.editPostHandler}
                 renderRedirect={this.renderRedirect}
               />
             )}
