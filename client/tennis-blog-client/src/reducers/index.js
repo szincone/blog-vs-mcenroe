@@ -15,6 +15,7 @@ const initialState = {
   isFetched: false,
   hasError: false,
   isDeleting: false,
+  redirect: false,
 };
 
 export const rootReducer = (state = initialState, action) => {
@@ -52,6 +53,7 @@ export const rootReducer = (state = initialState, action) => {
         ...state,
         isDeleting: false,
         posts: state.posts.filter(post => post.id !== action.payload),
+        redirect: true,
       };
     case ADD_NEW_POST:
       return {
