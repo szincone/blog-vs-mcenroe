@@ -53,13 +53,13 @@ export const deletePost = id => {
 };
 
 export const addNewPost = post => {
-  return function(dispatch) {
+  return async dispatch => {
     dispatch({ type: FETCHING_POST });
-    axios
-      .post(`${URL}/posts`, post)
-      .then(response =>
-        dispatch({ type: ADD_NEW_POST, payload: response.data }),
-      )
-      .catch(error => dispatch({ type: FETCH_FAILURE, payload: error }));
+    try {
+      const data = await axios.post(`${URL}/posts`, post);
+      dispatch({ type: ADD_NEW_POST, payload: data.data });
+    } catch (err) {
+      dispatch({ type: FETCH_FAILURE });
+    }
   };
 };

@@ -121,7 +121,7 @@ class PostView extends React.Component {
             <Link to="/all-notes">
               <button style={buttonStyle}>Home</button>
             </Link>
-            <Link to={`/edit-note/${this.state.id}`} key={this.state.id}>
+            <Link to={`/edit-note/${this.state.id}`}>
               <button className="editButton" style={buttonStyle}>
                 Edit
               </button>
