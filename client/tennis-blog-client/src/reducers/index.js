@@ -4,6 +4,7 @@ import {
   FETCH_FAILURE,
   FETCHING_POST,
   ADD_NEW_POST,
+  MODIFY_POST,
   DEL_POST,
   DELETED_POST,
 } from "../actions";
@@ -53,6 +54,12 @@ export const rootReducer = (state = initialState, action) => {
         posts: state.posts.filter(post => post.id !== action.payload),
       };
     case ADD_NEW_POST:
+      return {
+        ...state,
+        isFetching: false,
+        isFetched: true,
+      };
+    case MODIFY_POST:
       return {
         ...state,
         isFetching: false,
