@@ -66,7 +66,13 @@ class App extends Component {
           <Route
             exact
             path="/all-notes/:id"
-            render={props => <PostView {...props} {...this.props} />}
+            render={props => (
+              <PostView
+                {...props}
+                {...this.props}
+                renderRedirect={this.renderRedirect}
+              />
+            )}
           />
           <Route
             path="/create-note"
@@ -94,6 +100,7 @@ const mapStateToProps = state => {
     hasError: state.hasError,
     addNewPost: state.addNewPost,
     deletePost: state.deletePost,
+    redirect: state.redirect,
   };
 };
 

@@ -100,6 +100,7 @@ class PostView extends React.Component {
 
     return (
       <div className="cardContainer" style={cardContainerStyle}>
+        {this.props.renderRedirect()}
         <div className="cardBg" style={cardBg}>
           <header className="header" style={headerStyle}>
             <h1 className="title" style={h1Style}>
