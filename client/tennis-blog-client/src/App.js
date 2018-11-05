@@ -46,16 +46,10 @@ class App extends Component {
   editPostHandler = event => {
     event.preventDefault();
     const id = parseInt(this.props.location.pathname.match(/\d+$/)[0], 10);
-    const time_stamp = new Date();
-    console.log("TIME STAMP", time_stamp);
     const editedPost = {
       title: this.state.title,
       content: this.state.content,
-      score: 0,
-      time_stamp: time_stamp,
-      id: id,
     };
-    console.log("ID", id, "editedPost", editedPost);
     this.props.modifyPost(editedPost);
     this.setState({ title: "", content: "" });
     // setTimeout(() => this.setState({ redirect: true }), 200);

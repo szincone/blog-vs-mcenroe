@@ -66,10 +66,6 @@ export const addNewPost = post => {
 };
 
 export const modifyPost = editedPost => {
-  console.log("ID", editedPost.id);
-  console.log("EDITEDPOST", editedPost);
-  console.log("URL1", URL);
-  console.log("URL", `${URL}/posts/${editedPost.id}`);
   return function(dispatch) {
     dispatch({ type: FETCHING_MODIFY });
     axios

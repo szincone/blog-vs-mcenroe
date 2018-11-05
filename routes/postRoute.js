@@ -53,16 +53,15 @@ router.delete("/:id", (req, res, next) => {
 
 // start put
 router.put("/:id", (req, res, next) => {
-  const newPost = req.body;
-  console.log("REQUEST", newPost);
+  let newPost = req.body;
+  newPost.id = req.params.id;
   if (!newPost.title || !newPost.content) {
-    err.code = 406;
-    next(err);
+    newPost.code = 406;
+    next(newPost);
   } else {
     helpers
       .putPost(newPost)
-      .then(posts => {
-        console.log("POSTS PUT", posts);
+      .then(count => {
         res.status(200).json({ message: "Post successfully modified." });
       })
       .catch(err => {

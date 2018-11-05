@@ -23,21 +23,8 @@ module.exports = {
       .update({
         content: post.content,
         title: post.title,
-        // score: post.score,
-        // time_stamp: post.time_stamp,
       });
   },
-
-  // async updateNote(id, note) {
-  //   return await db(`Notes`)
-  //     .where({
-  //       id: id,
-  //     })
-  //     .update({
-  //       title: note.title,
-  //       content: note.content,
-  //     });
-  // },
 
   async delPost(id) {
     return await db(`Post`)
