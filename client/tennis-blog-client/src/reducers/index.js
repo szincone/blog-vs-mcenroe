@@ -1,8 +1,8 @@
 import {
-  // FETCHING,
   FETCH_SUCCESS,
   FETCH_FAILURE,
   FETCHING_POST,
+  FETCHING_MODIFY,
   ADD_NEW_POST,
   MODIFY_POST,
   DEL_POST,
@@ -60,6 +60,12 @@ export const rootReducer = (state = initialState, action) => {
         ...state,
         isFetching: false,
         isFetched: true,
+      };
+    case FETCHING_MODIFY:
+      return {
+        ...state,
+        isFetching: true,
+        isFetched: false,
       };
     case MODIFY_POST:
       return {

@@ -7,10 +7,11 @@ export const FETCHING_POST = "FETCHING_POST";
 // axios outcomes
 export const FETCH_SUCCESS = "FETCH_SUCCESS";
 export const FETCH_FAILURE = "FETCH_FAILURE";
+export const FETCHING_MODIFY = "FETCHING_MODIFY";
+export const DEL_POST = "DEL_POST";
 
 // case actions for updating state
 export const ADD_NEW_POST = "ADD_NEW_POST";
-export const DEL_POST = "DEL_POST";
 export const DELETED_POST = "DELETED_POST";
 export const MODIFY_POST = "MODIFY_POST";
 
@@ -64,14 +65,16 @@ export const addNewPost = post => {
   };
 };
 
-export const modifyPost = (id, editedPost) => {
-  console.log("ID", id);
+export const modifyPost = editedPost => {
+  console.log("ID", editedPost.id);
   console.log("EDITEDPOST", editedPost);
+  console.log("URL1", URL);
+  console.log("URL", `${URL}/posts/${editedPost.id}`);
   return function(dispatch) {
-    dispatch({ type: FETCHING_POST });
+    dispatch({ type: FETCHING_MODIFY });
     axios
-      .put(`${URL}/posts/${id}`, editedPost)
+      .put(`${URL}/posts/${editedPost.id}`, editedPost)
       .then(response => dispatch({ type: MODIFY_POST, payload: response.data }))
-      .catch(error => dispatch({ type: FETCH_FAILURE }));
+      .catch(error => dispatch({ type: FETCH_FAILURE, payload: error }));
   };
 };

@@ -15,7 +15,7 @@ module.exports = {
       .select();
   },
 
-  async putPost(post) {
+  async putPost(id, post) {
     return await db(`Post`)
       .where({
         id: post.id,
@@ -27,6 +27,17 @@ module.exports = {
         time_stamp: post.time_stamp,
       });
   },
+
+  // async updateNote(id, note) {
+  //   return await db(`Notes`)
+  //     .where({
+  //       id: id,
+  //     })
+  //     .update({
+  //       title: note.title,
+  //       content: note.content,
+  //     });
+  // },
 
   async delPost(id) {
     return await db(`Post`)

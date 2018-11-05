@@ -6,6 +6,7 @@ import {
   fetchPostID,
   addNewPost,
   deletePost,
+  modifyPost,
 } from "./actions/index";
 import MainFeed from "./containers/MainFeed.js";
 import PostView from "./containers/PostView.js";
@@ -44,14 +45,16 @@ class App extends Component {
 
   editPostHandler = event => {
     event.preventDefault();
+    const id = parseInt(this.props.location.pathname.match(/\d+$/)[0], 10);
     const editedPost = {
       title: this.state.title,
       content: this.state.content,
+      id: id,
     };
-    console.log("EDITEDPOST", editedPost);
-    // this.props.editPost(editedPost);
+    console.log("ID", id, "editedPost", editedPost);
+    this.props.modifyPost(editedPost);
     this.setState({ title: "", content: "" });
-    setTimeout(() => this.setState({ redirect: true }), 200);
+    // setTimeout(() => this.setState({ redirect: true }), 200);
   };
 
   // redirect
@@ -126,6 +129,7 @@ const mapStateToProps = state => {
     hasError: state.hasError,
     addNewPost: state.addNewPost,
     deletePost: state.deletePost,
+    modifyPost: state.modifyPost,
     redirect: state.redirect,
   };
 };
@@ -138,6 +142,7 @@ export default withRouter(
       fetchPostID,
       addNewPost,
       deletePost,
+      modifyPost,
     },
   )(App),
 );
