@@ -70,6 +70,7 @@ export const rootReducer = (state = initialState, action) => {
     case MODIFY_POST:
       return {
         ...state,
+        posts: action.payload,
         isFetching: false,
         isFetched: true,
       };

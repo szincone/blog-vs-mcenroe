@@ -15,7 +15,7 @@ module.exports = {
       .select();
   },
 
-  async putPost(id, post) {
+  async putPost(post) {
     return await db(`Post`)
       .where({
         id: post.id,
@@ -23,8 +23,8 @@ module.exports = {
       .update({
         content: post.content,
         title: post.title,
-        score: post.score,
-        time_stamp: post.time_stamp,
+        // score: post.score,
+        // time_stamp: post.time_stamp,
       });
   },
 
