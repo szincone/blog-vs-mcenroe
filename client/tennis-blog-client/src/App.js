@@ -40,7 +40,7 @@ class App extends Component {
     };
     this.props.addNewPost(addedPost);
     this.setState({ title: "", content: "" });
-    setTimeout(() => this.setState({ redirect: true }), 200);
+    setTimeout(() => this.setState({ redirect: true }), 100);
   };
 
   editPostHandler = event => {
@@ -49,10 +49,11 @@ class App extends Component {
     const editedPost = {
       title: this.state.title,
       content: this.state.content,
+      id,
     };
     this.props.modifyPost(editedPost);
     this.setState({ title: "", content: "" });
-    // setTimeout(() => this.setState({ redirect: true }), 200);
+    setTimeout(() => this.setState({ redirect: true }), 100);
   };
 
   // redirect
