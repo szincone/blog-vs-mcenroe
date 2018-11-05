@@ -56,6 +56,12 @@ class App extends Component {
     setTimeout(() => this.setState({ redirect: true }), 100);
   };
 
+  deletePostHandler = event => {
+    event.preventDefault();
+    const id = parseInt(this.props.location.pathname.match(/\d+$/)[0]);
+    console.log("ID", id);
+  };
+
   // redirect
   renderRedirect = () => {
     if (this.state.redirect) {
@@ -86,6 +92,7 @@ class App extends Component {
               <PostView
                 {...props}
                 {...this.props}
+                deletePostHandler={this.deletePostHandler}
                 renderRedirect={this.renderRedirect}
               />
             )}

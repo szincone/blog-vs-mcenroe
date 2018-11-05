@@ -108,7 +108,7 @@ class PostView extends React.Component {
       border: "1.5px solid #e75a7c",
       cursor: "pointer",
     };
-
+    console.log("PROPS", this.props);
     return (
       <div className="cardContainer" style={cardContainerStyle}>
         {this.props.renderRedirect()}
@@ -139,7 +139,8 @@ class PostView extends React.Component {
               </button>
             </Link>
             <button
-              onClick={() => this.props.deletePost(this.state.id)}
+              // onClick={() => this.props.deletePost(this.state.id)}
+              // onClick={() => this.props.deletePostHandler(this.state.id)}
               style={deleteButtonStyle}
             >
               Delete
