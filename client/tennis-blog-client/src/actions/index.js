@@ -24,7 +24,7 @@ export const fetchPosts = () => {
       const data = await axios.get(`${URL}/posts`);
       dispatch({ type: FETCH_SUCCESS, isGetAll: true, payload: data.data });
     } catch (err) {
-      dispatch({ type: FETCH_FAILURE });
+      dispatch({ type: FETCH_FAILURE, payload: err });
     }
   };
 };
@@ -36,7 +36,7 @@ export const fetchPostID = id => {
       const data = await axios.get(`${URL}/posts/${id}`);
       dispatch({ type: FETCH_SUCCESS, isGetAll: true, payload: data.data });
     } catch (err) {
-      dispatch({ type: FETCH_FAILURE });
+      dispatch({ type: FETCH_FAILURE, payload: err });
     }
   };
 };
@@ -48,7 +48,7 @@ export const deletePost = id => {
       await axios.delete(`${URL}/posts/${id}`);
       dispatch({ type: DELETED_POST, payload: id });
     } catch (err) {
-      dispatch({ type: FETCH_FAILURE });
+      dispatch({ type: FETCH_FAILURE, payload: err });
     }
   };
 };
@@ -60,17 +60,19 @@ export const addNewPost = post => {
       const data = await axios.post(`${URL}/posts`, post);
       dispatch({ type: ADD_NEW_POST, payload: data.data });
     } catch (err) {
-      dispatch({ type: FETCH_FAILURE });
+      dispatch({ type: FETCH_FAILURE, payload: err });
     }
   };
 };
 
 export const modifyPost = editedPost => {
-  return function(dispatch) {
+  return async dispatch => {
     dispatch({ type: FETCHING_MODIFY });
-    axios
-      .put(`${URL}/posts/${editedPost.id}`, editedPost)
-      .then(response => dispatch({ type: MODIFY_POST, payload: response.data }))
-      .catch(error => dispatch({ type: FETCH_FAILURE, payload: error }));
+    try {
+      const data = await axios.put(`${URL}/posts/${editedPost.id}`, editedPost);
+      dispatch({ type: MODIFY_POST, payload: data.data });
+    } catch (err) {
+      dispatch({ type: FETCH_FAILURE, payload: err });
+    }
   };
 };
