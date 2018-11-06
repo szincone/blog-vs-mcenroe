@@ -108,7 +108,6 @@ class PostView extends React.Component {
       border: "1.5px solid #e75a7c",
       cursor: "pointer",
     };
-    console.log("PROPS", this.props);
     return (
       <div className="cardContainer" style={cardContainerStyle}>
         {this.props.renderRedirect()}

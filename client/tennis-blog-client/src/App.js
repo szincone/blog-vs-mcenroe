@@ -40,7 +40,7 @@ class App extends Component {
     };
     this.props.addNewPost(addedPost);
     this.setState({ title: "", content: "" });
-    setTimeout(() => this.setState({ redirect: true }), 100);
+    setTimeout(() => this.setState({ redirect: true }), 50);
   };
 
   editPostHandler = event => {
@@ -53,13 +53,14 @@ class App extends Component {
     };
     this.props.modifyPost(editedPost);
     this.setState({ title: "", content: "" });
-    setTimeout(() => this.setState({ redirect: true }), 100);
+    setTimeout(() => this.setState({ redirect: true }), 50);
   };
 
   deletePostHandler = event => {
     event.preventDefault();
     const id = parseInt(this.props.location.pathname.match(/\d+$/)[0], 10);
     this.props.deletePost(id);
+    setTimeout(() => this.setState({ redirect: true }), 50);
   };
 
   // redirect
