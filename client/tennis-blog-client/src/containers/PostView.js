@@ -139,8 +139,7 @@ class PostView extends React.Component {
               </button>
             </Link>
             <button
-              // onClick={() => this.props.deletePost(this.state.id)}
-              // onClick={() => this.props.deletePostHandler(this.state.id)}
+              onClick={this.props.deletePostHandler}
               style={deleteButtonStyle}
             >
               Delete

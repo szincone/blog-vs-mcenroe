@@ -58,8 +58,8 @@ class App extends Component {
 
   deletePostHandler = event => {
     event.preventDefault();
-    const id = parseInt(this.props.location.pathname.match(/\d+$/)[0]);
-    console.log("ID", id);
+    const id = parseInt(this.props.location.pathname.match(/\d+$/)[0], 10);
+    this.props.deletePost(id);
   };
 
   // redirect
