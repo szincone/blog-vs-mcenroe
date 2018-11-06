@@ -7,7 +7,7 @@ const server = new express();
 const configureMiddleware = require("./middleware/middleware.js");
 configureMiddleware(server);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 
 server.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
