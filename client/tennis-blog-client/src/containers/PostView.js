@@ -64,7 +64,7 @@ class PostView extends React.Component {
       justifyContent: "center",
       flexDirection: "column",
       alignItems: "center",
-      margin: "1rem 0 1rem 8rem",
+      margin: "1rem 0 1rem 11rem",
     };
 
     const cardBg = {
