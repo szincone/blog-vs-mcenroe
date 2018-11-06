@@ -1,5 +1,5 @@
 import React from "react";
-import Post from "../components/Post.js";
+import Post from "../components/post/Post.js";
 import { NavLink } from "react-router-dom";
 
 function MainFeed(props) {
