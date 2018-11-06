@@ -21,7 +21,15 @@ router.get("/:id", (req, res, next) => {
   helpers
     .getPost(id)
     .then(posts => {
-      res.status(200).json(posts);
+      // if posts response is empty
+      if (posts.length === 0) {
+        // assign error code to empty array
+        posts.code = 404;
+        // pass to error handler
+        next(posts);
+      } else {
+        res.status(200).json(posts);
+      }
     })
     .catch(err => {
       err.code = 500;
