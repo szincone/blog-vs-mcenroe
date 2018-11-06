@@ -23,7 +23,7 @@ router.get("/:id", (req, res, next) => {
     .then(posts => {
       // if posts response is empty
       if (posts.length === 0) {
-        // assign error code to empty array
+        // assign error code property to posts
         posts.code = 404;
         // pass to error handler
         next(posts);
@@ -44,10 +44,12 @@ router.delete("/:id", (req, res, next) => {
   helpers
     .delPost(id)
     .then(posts => {
+      // if posts response is false (0)
       if (posts === 0) {
-        res.status(404).json({
-          message: "The post with the specified ID does not exist.",
-        });
+        // reassign posts num to error code object
+        posts = { code: 404 };
+        // pass to error handler
+        next(posts);
       } else {
         res.status(200).json({ message: "Post removed successfully." });
       }
