@@ -3,7 +3,7 @@
 const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
-const morgan = require("morgan");
+// const morgan = require("morgan");
 // routes
 const postRoutes = require("../routes/postRoute.js");
 
@@ -36,7 +36,7 @@ module.exports = server => {
   server.use(cors({ credentials: true, origin: process.env.CORS_URL }));
   server.use(helmet());
   server.use(express.json());
-  server.use(morgan("dev"));
+  // server.use(morgan("dev"));
   server.use("/posts", postRoutes);
   server.use(errorHandler);
 };
