@@ -1,3 +1,13 @@
-# tennis-blog
+# tennis-blog :tennis:
+Full-Stack Web App built using React and Node.js.
 
-### Full-Stack React app built using Redux (Front-end). Back-end built using express and sqlite3
+## front-end
+- React
+- Redux
+- Axios
+
+## back-end
+- Node.js
+- Express
+- Knex
+- SQLite
