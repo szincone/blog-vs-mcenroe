@@ -68,7 +68,7 @@ class App extends Component {
     if (this.state.redirect) {
       this.setState({ redirect: false });
       window.location.reload();
-      return <Redirect to="/" />;
+      return <Redirect to="/tennis-blog" />;
     } else {
       // do nothing
     }
@@ -87,7 +87,7 @@ class App extends Component {
         <Route path="/" component={NavBar} />
         <Route
           exact
-          path="/"
+          path="/tennis-blog"
           render={props => <MainFeed {...props} {...this.props} />}
         />
         <Route

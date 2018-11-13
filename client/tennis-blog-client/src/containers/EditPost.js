@@ -95,7 +95,7 @@ export const EditPost = props => {
           />
         </div>
         <div className="newNoteFooter" style={footerDivStyle}>
-          <Link to="/">
+          <Link to="/tennis-blog">
             <button style={footerButtonsStyle}>Home</button>
           </Link>
           <button style={footerButtonsStyle}>Modify</button>
