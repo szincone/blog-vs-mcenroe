@@ -68,61 +68,59 @@ class App extends Component {
     if (this.state.redirect) {
       this.setState({ redirect: false });
       window.location.reload();
-      return <Redirect to="/tennis-blog/all-notes" />;
+      return <Redirect to="/tennis-blog" />;
     } else {
       // do nothing
     }
   };
 
   render() {
-    if (!this.props.location.pathname.includes("note")) {
-      return <Redirect from="/" to="/tennis-blog/all-notes" />;
-    } else {
-      return (
-        <Fragment>
-          <Route path="/" component={NavBar} />
-          <Route
-            path="/all-notes"
-            render={props => <MainFeed {...props} {...this.props} />}
-          />
-          <Route
-            path="/all-notes/:id"
-            render={props => (
-              <PostView
-                {...props}
-                {...this.props}
-                deletePostHandler={this.deletePostHandler}
-                renderRedirect={this.renderRedirect}
-              />
-            )}
-          />
-          <Route
-            path="/create-note"
-            render={props => (
-              <NewPost
-                {...props}
-                {...this.props}
-                inputChangeHandler={this.inputChangeHandler}
-                submitNewPostHandler={this.submitNewPostHandler}
-                renderRedirect={this.renderRedirect}
-              />
-            )}
-          />
-          <Route
-            path="/edit-note"
-            render={props => (
-              <EditPost
-                {...props}
-                {...this.props}
-                inputChangeHandler={this.inputChangeHandler}
-                editPostHandler={this.editPostHandler}
-                renderRedirect={this.renderRedirect}
-              />
-            )}
-          />
-        </Fragment>
-      );
-    }
+    return (
+      <Fragment>
+        <Route path="/" component={NavBar} />
+        <Route
+          exact
+          path="/"
+          render={props => <MainFeed {...props} {...this.props} />}
+        />
+        <Route
+          exact
+          path="/:id"
+          render={props => (
+            <PostView
+              {...props}
+              {...this.props}
+              deletePostHandler={this.deletePostHandler}
+              renderRedirect={this.renderRedirect}
+            />
+          )}
+        />
+        <Route
+          path="/create-note"
+          render={props => (
+            <NewPost
+              {...props}
+              {...this.props}
+              inputChangeHandler={this.inputChangeHandler}
+              submitNewPostHandler={this.submitNewPostHandler}
+              renderRedirect={this.renderRedirect}
+            />
+          )}
+        />
+        <Route
+          path="/edit-note"
+          render={props => (
+            <EditPost
+              {...props}
+              {...this.props}
+              inputChangeHandler={this.inputChangeHandler}
+              editPostHandler={this.editPostHandler}
+              renderRedirect={this.renderRedirect}
+            />
+          )}
+        />
+      </Fragment>
+    );
   }
 }
 
