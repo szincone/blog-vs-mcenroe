@@ -68,7 +68,7 @@ class App extends Component {
     if (this.state.redirect) {
       this.setState({ redirect: false });
       window.location.reload();
-      return <Redirect to="/tennis-blog" />;
+      return <Redirect to="/" />;
     } else {
       // do nothing
     }
@@ -84,8 +84,7 @@ class App extends Component {
           render={props => <MainFeed {...props} {...this.props} />}
         />
         <Route
-          exact
-          path="/:id"
+          path="/all-notes/:id"
           render={props => (
             <PostView
               {...props}
