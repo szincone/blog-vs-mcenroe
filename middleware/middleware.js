@@ -33,7 +33,12 @@ function errorHandler(err, req, res, next) {
 }
 
 module.exports = server => {
-  server.use(cors({ credentials: true, origin: process.env.CORS_URL }));
+  server.use(
+    cors({
+      credentials: true,
+      origin: process.env.CORS_URL,
+    }),
+  );
   server.use(helmet());
   server.use(express.json());
   // server.use(morgan("dev"));
