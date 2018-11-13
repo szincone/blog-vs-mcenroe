@@ -1,6 +1,11 @@
 # tennis-blog :tennis:
 Full-Stack Web App built using React and Node.js.
 
+## demo
+- Live version of the site hosted here [tennis-blog](https://szincone.github.io/tennis-blog/)
+- Front-end hosted on Github Pages.
+- Back-end hosted on Heroku (uses free account, will need to refresh the site a few times to wake the backend up).
+
 ## front-end
 - React
 - Redux
