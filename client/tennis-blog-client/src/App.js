@@ -75,6 +75,13 @@ class App extends Component {
   };
 
   render() {
+    if (this.props.isFetched === false) {
+      return (
+        <div>
+          <p>Loading please wait</p>
+        </div>
+      );
+    }
     return (
       <Fragment>
         <Route path="/" component={NavBar} />
