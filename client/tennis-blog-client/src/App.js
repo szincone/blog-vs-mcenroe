@@ -76,7 +76,7 @@ class App extends Component {
 
   render() {
     if (!this.props.location.pathname.includes("note")) {
-      return <Redirect from="/" to="tennis-blog/all-notes" />;
+      return <Redirect from="/" to="/tennis-blog/all-notes" />;
     } else {
       return (
         <Fragment>
