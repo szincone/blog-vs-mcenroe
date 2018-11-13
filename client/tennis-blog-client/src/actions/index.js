@@ -15,7 +15,7 @@ export const ADD_NEW_POST = "ADD_NEW_POST";
 export const DELETED_POST = "DELETED_POST";
 export const MODIFY_POST = "MODIFY_POST";
 
-const URL = `http://localhost:9000`;
+const URL = process.env.BACKEND_URL;
 
 export const fetchPosts = () => {
   return async dispatch => {
