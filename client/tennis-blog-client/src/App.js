@@ -68,7 +68,7 @@ class App extends Component {
     if (this.state.redirect) {
       this.setState({ redirect: false });
       window.location.reload();
-      return <Redirect to="/tennis-blog" />;
+      return <Redirect to="/tennis-blog/all-notes" />;
     } else {
       // do nothing
     }
