@@ -82,12 +82,10 @@ class App extends Component {
         <Fragment>
           <Route path="/" component={NavBar} />
           <Route
-            exact
             path="/all-notes"
             render={props => <MainFeed {...props} {...this.props} />}
           />
           <Route
-            exact
             path="/all-notes/:id"
             render={props => (
               <PostView
