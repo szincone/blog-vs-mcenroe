@@ -76,16 +76,18 @@ class App extends Component {
 
   render() {
     if (!this.props.location.pathname.includes("note")) {
-      return <Redirect from="/" to="/tennis-blog/all-notes" />;
+      return <Redirect from="/" to="/all-notes" />;
     } else {
       return (
         <Fragment>
           <Route path="/" component={NavBar} />
           <Route
+            exact
             path="/all-notes"
             render={props => <MainFeed {...props} {...this.props} />}
           />
           <Route
+            exact
             path="/all-notes/:id"
             render={props => (
               <PostView
