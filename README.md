@@ -1,8 +1,8 @@
-# tennis-blog :tennis:
-Full-Stack Web App built using React and Node.js.
+# :tennis: blog-vs-mcenroe
+Full-Stack web application built using React, Redux, Express, and SQLite.
 
 ## demo
-- Live version of the site hosted here [tennis-blog](https://szincone.github.io/tennis-blog/)
+- Live version of the site hosted here :link:[Blog-vs-McEnroe](https://szincone.github.io/blog-vs-mcenroe/):link:
 - Front-end hosted on Github Pages.
 - Back-end hosted on Heroku (uses free account, will need to refresh the site a few times to wake the backend up).
 
@@ -18,10 +18,10 @@ Full-Stack Web App built using React and Node.js.
 - SQLite
 
 ## authors
-- Sawyer Zincone -_initial work_- [szincone](https://github.com/szincone)
-- Kamal Mukkamala -_initial work_- [Kamalnrf](https://github.com/Kamalnrf)
+- Sawyer Zincone -_intial work_- [szincone](https://github.com/szincone)
+- Kamal Mukkamala -_intial work_- [Kamalnrf](https://github.com/Kamalnrf)
 
 ## license
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/szincone/tennis-blog/blob/master/LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/szincone/blog-vs-mcenroe/blob/master/LICENSE.md) file for details.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
