@@ -5,9 +5,10 @@ export const NavBar = () => {
   return (
     <div className="navBarDiv">
       <div className="mainNavButtonsDiv">
-        <h1>Tennis</h1>
+        <h1>Blog</h1>
+        <h1>vs</h1>
         <h1>
-          Blog{" "}
+          McEnroe{" "}
           <span role="img" aria-label="tennis emoji">
             🎾
           </span>
