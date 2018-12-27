@@ -1,7 +1,7 @@
 {
-  "name": "tennis-blog",
+  "name": "blog-vs-mcenroe",
   "version": "1.0.0",
-  "description": "",
+  "description": "Full-Stack web application built using React, Redux, Express, and SQLite.",
   "main": "index.js",
   "scripts": {
     "start": "nodemon",
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/szincone/tennis-blog.git"
+    "url": "git+https://github.com/szincone/blog-vs-mcenroe.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/szincone/tennis-blog/issues"
+    "url": "https://github.com/szincone/blog-vs-mcenroe/issues"
   },
-  "homepage": "https://github.com/szincone/tennis-blog#readme",
+  "homepage": "https://github.com/szincone/blog-vs-mcenroe",
   "dependencies": {
     "cors": "^2.8.4",
     "dotenv": "^6.1.0",
