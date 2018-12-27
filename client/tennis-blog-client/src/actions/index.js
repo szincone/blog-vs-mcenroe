@@ -1,3 +1,4 @@
+require("dotenv").config();
 const axios = require("axios");
 axios.defaults.withCredentials = true;
 
@@ -15,7 +16,7 @@ export const ADD_NEW_POST = "ADD_NEW_POST";
 export const DELETED_POST = "DELETED_POST";
 export const MODIFY_POST = "MODIFY_POST";
 
-const URL = "https://tennis-blog-backend.herokuapp.com";
+const URL = process.env.BACKEND_URL;
 
 export const fetchPosts = () => {
   return async dispatch => {

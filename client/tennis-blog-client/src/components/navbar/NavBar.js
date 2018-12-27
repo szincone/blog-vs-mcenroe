@@ -12,7 +12,7 @@ export const NavBar = () => {
             🎾
           </span>
         </h1>
-        <Link to="/tennis-blog">
+        <Link to="/blog-vs-mcenroe">
           <button>View All</button>
         </Link>
         <Link to="/create-note">

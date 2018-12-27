@@ -1,10 +1,11 @@
 {
-  "name": "tennis-blog-client",
+  "name": "blog-vs-mcenroe",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://szincone.github.io/tennis-blog/",
+  "homepage": "https://szincone.github.io/blog-vs-mcenroe/",
   "dependencies": {
     "axios": "^0.18.0",
+    "dotenv": "^6.2.0",
     "gh-pages": "^2.0.1",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",

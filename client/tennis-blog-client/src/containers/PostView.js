@@ -129,7 +129,7 @@ class PostView extends React.Component {
             </div>
           )}
           <div className="singlePostButtonsDiv" style={buttonsDivStyle}>
-            <Link to="/tennis-blog">
+            <Link to="/blog-vs-mcenroe">
               <button style={buttonStyle}>Home</button>
             </Link>
             <Link to={`/edit-note/${this.state.id}`}>
